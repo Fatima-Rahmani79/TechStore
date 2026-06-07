@@ -1,11 +1,18 @@
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
   return (
-    <nav className=" flex  flex-row px-6 py-4 items-center justify-between">
-      <h1 className="text-red-500">TECH STORE</h1>
+    <nav className=" flex flex-row px-6 py-4 items-center justify-between">
+      <h1 className="text-amber-500">TECH STORE</h1>
 
       <ul className=" flex items-center space-x-6">
-        <li>Shop</li>
-        <li>About</li>
+        <Link to={"/"}>
+          <li>Shop</li>
+        </Link>
+
+        <Link to={"/about"}>
+          <li>About</li>
+        </Link>
       </ul>
 
       <div className="flex items-center space-x-4">
