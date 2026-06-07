@@ -1,7 +1,7 @@
 export default function Navbar() {
   return (
     <nav className=" flex  flex-row px-6 py-4 items-center justify-between">
-      <h1 className=" text-red-500">TECH STORE</h1>
+      <h1 className="text-red-500">TECH STORE</h1>
 
       <ul className=" flex items-center space-x-6">
         <li>Shop</li>
