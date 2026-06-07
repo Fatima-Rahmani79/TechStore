@@ -10,7 +10,7 @@
 
   /* Text */
   --text-primary: #111110; /* neutral-900 */
-  --text-secondary: #4a4945; /* neutral-600 */
+  --text-secondary: #2a2a2a; /* neutral-600 */
   --text-muted: #9b9a95; /* neutral-400 */
   --text-inverse: #ffffff;
 
@@ -182,6 +182,26 @@
       color 150ms ease;
   }
   .btn-ghost:hover {
+    background: var(--bg-subtle);
+    color: var(--text-primary);
+  }
+
+  .btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background: transparent;
+    color: var(--text-secondary);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition:
+      background 150ms ease,
+      color 150ms ease;
+  }
+
+  .btn-icon:hover {
     background: var(--bg-subtle);
     color: var(--text-primary);
   }
