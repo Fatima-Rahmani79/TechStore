@@ -16,6 +16,7 @@ export default function Navbar() {
       </ul>
 
       <div className="flex items-center space-x-4">
+        <button className="btn-primary">Sign In</button>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
