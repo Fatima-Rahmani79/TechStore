@@ -3,7 +3,7 @@ import heroImage from "../../assets/images/hero-image.png";
 
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-6xl px-6">
+    <section className="mx-auto max-w-7xl px-6">
       <div className="grid min-h-[calc(100vh-80px)] items-center lg:grid-cols-2">
         {/* Content */}
         <div className="space-y-12">
