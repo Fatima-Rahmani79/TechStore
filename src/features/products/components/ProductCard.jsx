@@ -1,8 +1,6 @@
 import { HeartIcon } from "lucide-react";
 
 export default function ProductCard({ product }) {
-  const imageSrc = product.image || product.images?.[0] || "";
-
   return (
     <div
       className="rounded-2xl
@@ -14,7 +12,7 @@ export default function ProductCard({ product }) {
         hover:shadow-lg"
     >
       <img
-        src={imageSrc}
+        src={product.images[0]}
         alt={product.name}
         className="h-48 w-full object-cover"
       />

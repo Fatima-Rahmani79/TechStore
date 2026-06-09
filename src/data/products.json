@@ -45,7 +45,7 @@
     "relatedProducts": [2, 3],
     "slug": "laptop-hp-omnibook-5-16-intel-core-i5",
     "isNew": false,
-    "featured": false,
+    "featured": true,
     "tags": ["laptop", "hp"]
   },
   {
@@ -291,7 +291,7 @@
     "relatedProducts": [4, 5],
     "slug": "dell-15-laptop",
     "isNew": false,
-    "featured": false,
+    "featured": true,
     "tags": ["laptop", "dell"]
   },
   {
@@ -531,7 +531,7 @@
     "relatedProducts": [10, 12],
     "slug": "dell-ultrasharp-34-curved-thunderbolt-hub-monitor-u3425we",
     "isNew": false,
-    "featured": false,
+    "featured": true,
     "tags": ["monitor", "dell"]
   },
   {
@@ -938,7 +938,7 @@
     "relatedProducts": [19, 20],
     "slug": "jbl-tune-230nc-tws-true-wireless-noise-cancelling-earbuds",
     "isNew": false,
-    "featured": false,
+    "featured": true,
     "tags": ["audio", "jbl"]
   },
   {
