@@ -3,7 +3,6 @@ export default function CategoryCard({ category }) {
     <div
       className="rounded-2xl
          bg-white
-        
         flex
         flex-col
         justify-between
