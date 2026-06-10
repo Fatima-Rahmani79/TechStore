@@ -8,6 +8,6 @@ export async function getFeaturedProducts() {
   return products.filter((product) => product.featured);
 }
 
-export async function getProductBySlug(slug) {
-  return products.find((product) => product.slug === slug);
+export async function getProductByCategory(category) {
+  return products.find((product) => product.category === category);
 }
