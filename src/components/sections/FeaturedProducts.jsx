@@ -20,7 +20,15 @@ export default function FeaturedProducts() {
   return (
     <section className="mx-auto max-w-7xl py-12 px-6 flex justify-center">
       <div className="container">
-        <h2 className="text-3xl font-bold mb-8">Featured Products</h2>
+        <div className="mb-10">
+          <p className="badge badge-accent mb-3">Featured</p>
+
+          <h2 className="text-4xl font-display">Featured Products</h2>
+
+          <p className="mt-3 max-w-xl text-neutral-600">
+            Discover our handpicked selection of featured products, showcasing
+          </p>
+        </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
