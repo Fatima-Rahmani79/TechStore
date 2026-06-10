@@ -11,7 +11,7 @@ export default function CategoryCard({ category }) {
         hover:shadow-lg
       "
     >
-      <img src={category.img} alt={category.name} className="h-70 w-full" />
+      <img src={category.image} alt={category.name} className="h-70 w-full" />
 
       <div className="p-5">
         <h3 className="text-lg font-semibold">{category.name}</h3>

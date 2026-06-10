@@ -1,23 +1,53 @@
 import CategoryCard from "../../features/products/components/CategoryCard";
 import laptopsCategory from "../../assets/images/laptops.jpg";
-import monitors from "../../assets/images/monitor.webp";
+import monitorsCategory from "../../assets/images/monitor.webp";
 import audioCategory from "../../assets/images/audio.jpg";
 import accessoriesCategory from "../../assets/images/accessory.webp";
 
 const categories = [
-  { name: "Laptops", img: laptopsCategory },
-  { name: "Monitors", img: monitors },
-  { name: "Audio", img: audioCategory },
-  { name: "Accessories", img: accessoriesCategory },
+  {
+    id: 1,
+    name: "Laptops",
+    image: laptopsCategory,
+    description: "High-performance laptops for work and gaming",
+  },
+  {
+    id: 2,
+    name: "Monitors",
+    image: monitorsCategory,
+    description: "Sharp displays for productivity and entertainment",
+  },
+  {
+    id: 3,
+    name: "Audio",
+    image: audioCategory,
+    description: "Headphones, speakers and premium sound gear",
+  },
+  {
+    id: 4,
+    name: "Accessories",
+    image: accessoriesCategory,
+    description: "Essential accessories for your setup",
+  },
 ];
+
 export default function Categories() {
   return (
-    <section className="w-[1200px] mx-auto">
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-10 sm:px-12 md:px-16 lg:px-20 py-12">
-        <h2 className="col-span-full text-2xl font-bold">Shop by Category</h2>
+    <section className="mx-auto max-w-7xl px-6 py-20">
+      <div className="mb-10">
+        <p className="badge badge-accent mb-3">Categories</p>
 
+        <h2 className="text-4xl font-display">Shop by Category</h2>
+
+        <p className="mt-3 max-w-xl text-neutral-600">
+          Explore our collection of laptops, monitors, audio devices, and
+          accessories designed for modern work and entertainment.
+        </p>
+      </div>
+
+      <div className="grid gap-8 md:grid-cols-2">
         {categories.map((category) => (
-          <CategoryCard key={category.name} category={category} />
+          <CategoryCard key={category.id} category={category} />
         ))}
       </div>
     </section>
