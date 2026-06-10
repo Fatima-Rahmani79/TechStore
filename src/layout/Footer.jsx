@@ -54,6 +54,24 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+
+          {/* Social */}
+          <div>
+            <h3 className="mb-4 font-semibold">Social</h3>
+
+            <ul className="space-y-3">
+              {socialLinks.map((item) => (
+                <li key={item}>
+                  <a
+                    href="#"
+                    className="text-neutral-600 transition hover:text-black"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="mt-12 border-t border-neutral-200 pt-6">
