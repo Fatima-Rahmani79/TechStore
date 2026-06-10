@@ -14,9 +14,9 @@
     "category": "laptop",
     "stock": 12,
     "images": [
-      "assets/images/hp-omniBook-1.avif",
-      "assets/images/hp-omniBook-2.webp",
-      "assets/images/hp-omniBook-3.avif"
+      "./src/assets/images/hp-omniBook-1.avif",
+      "./src/assets/images/hp-omniBook-2.webp",
+      "./src/assets/images/hp-omniBook-3.avif"
     ],
     "price": 400,
     "currency": "USD",
@@ -45,7 +45,7 @@
     "relatedProducts": [2, 3],
     "slug": "laptop-hp-omnibook-5-16-intel-core-i5",
     "isNew": false,
-    "featured": true,
+    "featured": false,
     "tags": ["laptop", "hp"]
   },
   {
@@ -63,9 +63,9 @@
     "category": "laptop",
     "stock": 5,
     "images": [
-      "assets/images/hp-proBook-1.avif",
-      "assets/images/hp-proBook-2.avif",
-      "assets/images/hp-proBook-3.avif"
+      "./src/assets/images/hp-proBook-1.avif",
+      "./src/assets/images/hp-proBook-2.avif",
+      "./src/assets/images/hp-proBook-3.avif"
     ],
     "price": 890,
     "currency": "USD",
@@ -112,10 +112,10 @@
     "category": "laptop",
     "stock": 8,
     "images": [
-      "assets/images/hp-pavilion-1.webp",
-      "assets/images/hp-pavilion-2.avif",
-      "assets/images/hp-pavilion-3.webp",
-      "assets/images/hp-pavilion-4.webp"
+      "./src/assets/images/hp-pavilion-1.webp",
+      "./src/assets/images/hp-pavilion-2.avif",
+      "./src/assets/images/hp-pavilion-3.webp",
+      "./src/assets/images/hp-pavilion-4.webp"
     ],
     "price": 600,
     "currency": "USD",
@@ -162,9 +162,9 @@
     "category": "laptop",
     "stock": 14,
     "images": [
-      "assets/images/hp-OMENGaming-1.webp",
-      "assets/images/hp-OMENGaming-2.webp",
-      "assets/images/hp-OMENGaming-3.webp"
+      "./src/assets/images/hp-OMENGaming-1.webp",
+      "./src/assets/images/hp-OMENGaming-2.webp",
+      "./src/assets/images/hp-OMENGaming-3.webp"
     ],
     "price": 1499,
     "currency": "USD",
@@ -211,9 +211,9 @@
     "category": "laptop",
     "stock": 12,
     "images": [
-      "assets/images/dell-14-premium-1.avif",
-      "assets/images/dell-14-premium-2.avif",
-      "assets/images/dell-14-premium-3.avif"
+      "./src/assets/images/dell-14-premium-1.avif",
+      "./src/assets/images/dell-14-premium-2.avif",
+      "./src/assets/images/dell-14-premium-3.avif"
     ],
     "price": 1400,
     "currency": "USD",
@@ -260,9 +260,9 @@
     "category": "laptop",
     "stock": 20,
     "images": [
-      "assets/images/dell-15-1.avif",
-      "assets/images/dell-15-2.avif",
-      "assets/images/dell-15-3.avif"
+      "./src/assets/images/dell-15-1.avif",
+      "./src/assets/images/dell-15-2.avif",
+      "./src/assets/images/dell-15-3.avif"
     ],
     "price": 330,
     "currency": "USD",
@@ -309,9 +309,9 @@
     "category": "laptop",
     "stock": 16,
     "images": [
-      "assets/images/dell-16-1.avif",
-      "assets/images/dell-16-2.avif",
-      "assets/images/dell-16-3.avif"
+      "./src/assets/images/dell-16-1.avif",
+      "./src/assets/images/dell-16-2.avif",
+      "./src/assets/images/dell-16-3.avif"
     ],
     "price": 550,
     "currency": "USD",
@@ -353,9 +353,9 @@
     "category": "laptop",
     "stock": 7,
     "images": [
-      "assets/images/asus-proArtPZ13-1.png",
-      "assets/images/asus-proArtPZ13-2.png",
-      "assets/images/asus-proArtPZ13-3.png",
+      "./src/assets/images/asus-proArtPZ13-1.png",
+      "./src/assets/images/asus-proArtPZ13-2.png",
+      "./src/assets/images/asus-proArtPZ13-3.png",
       "../images/asus-proArtPZ13-4.png"
     ],
     "price": 1200,
@@ -403,9 +403,9 @@
     "category": "laptop",
     "stock": 22,
     "images": [
-      "assets/images/lenovo-chromebook-1.webp",
-      "assets/images/lenovo-chromebook-2.webp",
-      "assets/images/lenovo-chromebook-3.avif"
+      "./src/assets/images/lenovo-chromebook-1.webp",
+      "./src/assets/images/lenovo-chromebook-2.webp",
+      "./src/assets/images/lenovo-chromebook-3.avif"
     ],
     "price": 250,
     "currency": "USD",
@@ -451,9 +451,9 @@
     "category": "monitor",
     "stock": 15,
     "images": [
-      "assets/images/monitor-dell32CurvedGaming-1.avif",
-      "assets/images/monitor-dell32CurvedGaming-2.avif",
-      "assets/images/monitor-dell32CurvedGaming-3.avif"
+      "./src/assets/images/monitor-dell32CurvedGaming-1.avif",
+      "./src/assets/images/monitor-dell32CurvedGaming-2.avif",
+      "./src/assets/images/monitor-dell32CurvedGaming-3.avif"
     ],
     "price": 330,
     "currency": "USD",
@@ -499,9 +499,9 @@
     "category": "monitor",
     "stock": 10,
     "images": [
-      "assets/images/monitor-dell-ultrasharp-1.avif",
-      "assets/images/monitor-dell-ultrasharp-2.avif",
-      "assets/images/monitor-dell-ultrasharp-3.avif"
+      "./src/assets/images/monitor-dell-ultrasharp-1.avif",
+      "./src/assets/images/monitor-dell-ultrasharp-2.avif",
+      "./src/assets/images/monitor-dell-ultrasharp-3.avif"
     ],
     "price": 890,
     "currency": "USD",
@@ -548,9 +548,9 @@
     "category": "monitor",
     "stock": 10,
     "images": [
-      "assets/images/monitor-odysseyNeoG7-1.webp",
-      "assets/images/monitor-odysseyNeoG7-2.webp",
-      "assets/images/monitor-odysseyNeoG7-3.webp"
+      "./src/assets/images/monitor-odysseyNeoG7-1.webp",
+      "./src/assets/images/monitor-odysseyNeoG7-2.webp",
+      "./src/assets/images/monitor-odysseyNeoG7-3.webp"
     ],
     "price": 649,
     "currency": "USD",
@@ -596,9 +596,9 @@
     "category": "monitor",
     "stock": 10,
     "images": [
-      "assets/images/monitor-viewfinity-s8-1.webp",
-      "assets/images/monitor-viewfinity-s8-2.webp",
-      "assets/images/monitor-viewfinity-s8-3.webp"
+      "./src/assets/images/monitor-viewfinity-s8-1.webp",
+      "./src/assets/images/monitor-viewfinity-s8-2.webp",
+      "./src/assets/images/monitor-viewfinity-s8-3.webp"
     ],
     "price": 430,
     "currency": "USD",
@@ -644,9 +644,9 @@
     "category": "monitor",
     "stock": 16,
     "images": [
-      "assets/images/mnitor-HP-Series5-1.avif",
-      "assets/images/mnitor-HP-Series5-2.webp",
-      "assets/images/mnitor-HP-Series5-3.avif"
+      "./src/assets/images/mnitor-HP-Series5-1.avif",
+      "./src/assets/images/mnitor-HP-Series5-2.webp",
+      "./src/assets/images/mnitor-HP-Series5-3.avif"
     ],
     "price": 110,
     "currency": "USD",
@@ -689,9 +689,9 @@
     "category": "audio",
     "stock": 25,
     "images": [
-      "assets/images/audio-sonyWH1000XM5-1.webp",
-      "assets/images/audio-sonyWH1000XM5-2.webp",
-      "assets/images/audio-sonyWH1000XM5-3.webp"
+      "./src/assets/images/audio-sonyWH1000XM5-1.webp",
+      "./src/assets/images/audio-sonyWH1000XM5-2.webp",
+      "./src/assets/images/audio-sonyWH1000XM5-3.webp"
     ],
     "price": 350,
     "currency": "USD",
@@ -720,7 +720,7 @@
     "relatedProducts": [16, 17],
     "slug": "sony-wh-1000xm5-wireless-noise-canceling-overhead-headphones",
     "isNew": false,
-    "featured": false,
+    "featured": true,
     "tags": ["audio", "sony"]
   },
   {
@@ -735,8 +735,8 @@
     "category": "audio",
     "stock": 32,
     "images": [
-      "assets/images/audio-Headset-G2-1.webp",
-      "assets/images/audio-Headset-G2-2.webp"
+      "./src/assets/images/audio-Headset-G2-1.webp",
+      "./src/assets/images/audio-Headset-G2-2.webp"
     ],
     "price": 20,
     "currency": "USD",
@@ -779,10 +779,10 @@
     "category": "audio",
     "stock": 28,
     "images": [
-      "assets/images/audio-HyperX-Cloud-1.webp",
-      "assets/images/audio-HyperX-Cloud-2.webp",
-      "assets/images/audio-HyperX-Cloud-3.webp",
-      "assets/images/audio-HyperX-Cloud-4.webp"
+      "./src/assets/images/audio-HyperX-Cloud-1.webp",
+      "./src/assets/images/audio-HyperX-Cloud-2.webp",
+      "./src/assets/images/audio-HyperX-Cloud-3.webp",
+      "./src/assets/images/audio-HyperX-Cloud-4.webp"
     ],
     "price": 100,
     "currency": "USD",
@@ -819,9 +819,9 @@
     "category": "audio",
     "stock": 30,
     "images": [
-      "assets/images/audio-PolyVoyager-1.webp",
-      "assets/images/audio-PolyVoyager-2.webp",
-      "assets/images/audio-PolyVoyager-3.webp"
+      "./src/assets/images/audio-PolyVoyager-1.webp",
+      "./src/assets/images/audio-PolyVoyager-2.webp",
+      "./src/assets/images/audio-PolyVoyager-3.webp"
     ],
     "price": 139,
     "currency": "USD",
@@ -864,8 +864,8 @@
     "category": "audio",
     "stock": 40,
     "images": [
-      "assets/images/audio-airpodsPro-1.jpg",
-      "assets/images/audio-airpodsPro-2.jpg"
+      "./src/assets/images/audio-airpodsPro-1.jpg",
+      "./src/assets/images/audio-airpodsPro-2.jpg"
     ],
     "price": 249,
     "currency": "USD",
@@ -908,8 +908,8 @@
     "category": "audio",
     "stock": 35,
     "images": [
-      "assets/images/audio-JBL-Tune230NC-1.png",
-      "assets/images/audio-JBL-Tune230NC-2.webp"
+      "./src/assets/images/audio-JBL-Tune230NC-1.png",
+      "./src/assets/images/audio-JBL-Tune230NC-2.webp"
     ],
     "price": 100,
     "currency": "USD",
@@ -952,8 +952,8 @@
     "category": "audio",
     "stock": 20,
     "images": [
-      "assets/images/audio-QuietComfortEarbuds-1.webp",
-      "assets/images/audio-QuietComfortEarbuds-2.webp"
+      "./src/assets/images/audio-QuietComfortEarbuds-1.webp",
+      "./src/assets/images/audio-QuietComfortEarbuds-2.webp"
     ],
     "price": 299,
     "currency": "USD",
@@ -996,9 +996,9 @@
     "category": "accessory",
     "stock": 50,
     "images": [
-      "assets/images/accessory-logitechMXMaster3S-1.webp",
-      "assets/images/accessory-logitechMXMaster3S-2.webp",
-      "assets/images/accessory-logitechMXMaster3S-3.webp"
+      "./src/assets/images/accessory-logitechMXMaster3S-1.webp",
+      "./src/assets/images/accessory-logitechMXMaster3S-2.webp",
+      "./src/assets/images/accessory-logitechMXMaster3S-3.webp"
     ],
     "price": 100,
     "currency": "USD",
@@ -1041,8 +1041,8 @@
     "category": "accessory",
     "stock": 40,
     "images": [
-      "assets/images/accessory-K380MULTI-DEVICE-1.webp",
-      "assets/images/accessory-K380MULTI-DEVICE-2.webp"
+      "./src/assets/images/accessory-K380MULTI-DEVICE-1.webp",
+      "./src/assets/images/accessory-K380MULTI-DEVICE-2.webp"
     ],
     "price": 55,
     "currency": "USD",
@@ -1086,8 +1086,8 @@
     "category": "accessory",
     "stock": 25,
     "images": [
-      "assets/images/accessory-DellProSilentWired-1.avif",
-      "assets/images/accessory-DellProSilentWired-2.avif"
+      "./src/assets/images/accessory-DellProSilentWired-1.avif",
+      "./src/assets/images/accessory-DellProSilentWired-2.avif"
     ],
     "price": 35,
     "currency": "USD",
@@ -1130,8 +1130,8 @@
     "category": "accessory",
     "stock": 45,
     "images": [
-      "assets/images/accessory-HP125WiredMouse-1.avif",
-      "assets/images/accessory-HP125WiredMouse-2.avif"
+      "./src/assets/images/accessory-HP125WiredMouse-1.avif",
+      "./src/assets/images/accessory-HP125WiredMouse-2.avif"
     ],
     "price": 6,
     "currency": "USD",
@@ -1174,8 +1174,8 @@
     "category": "accessory",
     "stock": 30,
     "images": [
-      "assets/images/accessory-DellProPremiumCompact-1.avif",
-      "assets/images/accessory-DellProPremiumCompact-2.avif"
+      "./src/assets/images/accessory-DellProPremiumCompact-1.avif",
+      "./src/assets/images/accessory-DellProPremiumCompact-2.avif"
     ],
     "price": 70,
     "currency": "USD",
@@ -1218,8 +1218,8 @@
     "category": "accessory",
     "stock": 20,
     "images": [
-      "assets/images/accessory-AlienwareTri-ModeWireless-2.avif",
-      "assets/images/accessory-AlienwareTri-ModeWireless-1.avif"
+      "./src/assets/images/accessory-AlienwareTri-ModeWireless-2.avif",
+      "./src/assets/images/accessory-AlienwareTri-ModeWireless-1.avif"
     ],
     "price": 200,
     "currency": "USD",

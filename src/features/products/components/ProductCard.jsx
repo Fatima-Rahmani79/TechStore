@@ -6,6 +6,9 @@ export default function ProductCard({ product }) {
       className="rounded-2xl
         border
         p-4
+        flex
+        flex-col
+        justify-between
         transition-all
         duration-300
         hover:-translate-y-1
@@ -14,17 +17,19 @@ export default function ProductCard({ product }) {
       <img
         src={product.images[0]}
         alt={product.name}
-        className="h-48 w-full object-cover"
+        className="w-full object-contain"
       />
-      <div className="mt-4">
-        <h3 className="min-h-[56px] text-lg font-semibold">{product.name}</h3>
-        <p className="mt-2 text-gray-600">${product.price}</p>
-      </div>
-      <div className="mt-4 flex justify-between gap-2">
-        <button className="btn-icon">
-          <HeartIcon size={18} />
-        </button>
-        <button className="btn-primary">View Product</button>
+      <div className="flex flex-col justify-between">
+        <div className="mt-2">
+          <h3 className="min-h-[60px] text-lg font-semibold">{product.name}</h3>
+          <p className="mt-1 text-gray-600">${product.price}</p>
+        </div>
+        <div className="mt-2 flex justify-between gap-2">
+          <button className="btn-icon">
+            <HeartIcon size={18} />
+          </button>
+          <button className="btn-primary">View Product</button>
+        </div>
       </div>
     </div>
   );
