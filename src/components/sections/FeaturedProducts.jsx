@@ -18,9 +18,9 @@ export default function FeaturedProducts() {
   }, []);
 
   return (
-    <section className="mx-auto max-w-7xl py-12 px-6 flex justify-center">
+    <section className="mx-auto mb-14 max-w-7xl px-6 flex justify-center">
       <div className="container">
-        <div className="mb-10">
+        <div className="mb-12">
           <p className="badge badge-accent mb-3">Featured</p>
 
           <h2 className="text-4xl font-display">Featured Products</h2>

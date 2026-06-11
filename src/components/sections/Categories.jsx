@@ -33,7 +33,7 @@ const categories = [
 
 export default function Categories() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20">
+    <section className="mx-auto mb-14 max-w-7xl px-6 py-20">
       <div className="mb-10">
         <p className="badge badge-accent mb-3">Categories</p>
 

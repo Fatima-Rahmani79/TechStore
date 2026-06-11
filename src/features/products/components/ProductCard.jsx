@@ -24,11 +24,11 @@ export default function ProductCard({ product }) {
           <h3 className="min-h-[60px] text-lg font-semibold">{product.name}</h3>
           <p className="mt-1 text-gray-600">${product.price}</p>
         </div>
-        <div className="mt-2 flex justify-between gap-2">
+        <div className="mt-2 flex justify-between gap-2 px-5 py-2 =">
           <button className="btn-icon">
             <HeartIcon size={18} />
           </button>
-          <button className="btn-primary">View Product</button>
+          <button className="btn-primary rounded-xl">View Product</button>
         </div>
       </div>
     </div>
