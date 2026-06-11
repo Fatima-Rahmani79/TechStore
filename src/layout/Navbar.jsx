@@ -14,7 +14,7 @@ export default function Navbar() {
 
         <ul className=" flex items-center space-x-6">
           <li>
-            <NavLink to="/">Shop</NavLink>
+            <NavLink to="/shop">Shop</NavLink>
           </li>
 
           <li>
