@@ -37,7 +37,10 @@ export default function Shop() {
         products={products}
         onSelectCategory={setSelectedCategory}
       />
-      <ProductGrid products={filteredProducts} />
+
+      <ProductGrid
+        products={selectedCategory !== "all" ? filteredProducts : products}
+      />
     </div>
   );
 }
