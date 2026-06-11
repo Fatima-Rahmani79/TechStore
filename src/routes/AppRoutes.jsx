@@ -7,12 +7,14 @@ import Wishlist from "../pages/WishlistPage";
 import Search from "../pages/SearchPage";
 import NotFound from "../pages/NotFoundPage";
 import MainLayout from "../layout/MainLayout";
+import Shop from "../pages/Shop";
 
 export default function AppRoutes() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/search" element={<Search />} />

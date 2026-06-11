@@ -9,8 +9,6 @@ export default function FeaturedProducts() {
     async function loadProducts() {
       const data = await getFeaturedProducts();
 
-      console.log(data.filter((p) => p.featured));
-
       setProducts(data);
     }
 
