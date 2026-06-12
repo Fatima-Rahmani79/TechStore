@@ -13,6 +13,9 @@ export default function Shop() {
     (product) => product.category === selectedCategory,
   );
 
+  const displayedProducts =
+    selectedCategory === "all" ? products : filteredProducts;
+
   useEffect(() => {
     async function loadProducts() {
       const data = await getProducts();
@@ -38,9 +41,7 @@ export default function Shop() {
         onSelectCategory={setSelectedCategory}
       />
 
-      <ProductGrid
-        products={selectedCategory !== "all" ? filteredProducts : products}
-      />
+      <ProductGrid products={displayedProducts} />
     </div>
   );
 }
