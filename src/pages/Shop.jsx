@@ -15,10 +15,10 @@ export default function Shop() {
     (product) => product.category === selectedCategory,
   );
 
-  const displayedProducts =
+  const categoryFilteredProducts =
     selectedCategory === "all" ? products : filteredProducts;
 
-  const searchResult = displayedProducts.filter((product) =>
+  const searchedProducts = categoryFilteredProducts.filter((product) =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
@@ -50,7 +50,7 @@ export default function Shop() {
         onSelectCategory={setSelectedCategory}
       />
 
-      <ProductGrid products={searchResult} />
+      <ProductGrid products={searchedProducts} />
     </div>
   );
 }
