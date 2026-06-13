@@ -18,6 +18,10 @@ export default function Shop() {
   const displayedProducts =
     selectedCategory === "all" ? products : filteredProducts;
 
+  const searchResult = displayedProducts.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase()),
+  );
+
   useEffect(() => {
     async function loadProducts() {
       const data = await getProducts();
@@ -28,6 +32,7 @@ export default function Shop() {
     loadProducts();
   }, []);
   // if (loading) return <p>Loading...</p>;
+
   return (
     <div className="mx-auto max-w-7xl px-6 py-12">
       <div className="mb-10">
@@ -38,14 +43,14 @@ export default function Shop() {
         </p>
       </div>
 
-      <SearchBar search={searchTerm} onSearchTerm={} />
+      <SearchBar search={searchTerm} onSearchTerm={setSearchTerm} />
 
       <ProductFilters
         products={products}
         onSelectCategory={setSelectedCategory}
       />
 
-      <ProductGrid products={displayedProducts} />
+      <ProductGrid products={searchResult} />
     </div>
   );
 }
