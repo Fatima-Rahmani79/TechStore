@@ -18,9 +18,15 @@ export default function Shop() {
   const categoryFilteredProducts =
     selectedCategory === "all" ? products : filteredProducts;
 
-  const searchedProducts = categoryFilteredProducts.filter((product) =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase()),
-  );
+  const searchedProducts = categoryFilteredProducts.filter((product) => {
+    const searchableText = `
+    ${product.name}
+    ${product.category}
+    ${product.brand}
+  `.toLowerCase();
+
+    return searchableText.includes(searchTerm.toLowerCase());
+  });
 
   useEffect(() => {
     async function loadProducts() {
