@@ -38,7 +38,7 @@ export default function Shop() {
         </p>
       </div>
 
-      <SearchBar search={searchTerm} onSearchTerm={setSearchTerm} />
+      <SearchBar search={searchTerm} onSearchTerm={} />
 
       <ProductFilters
         products={products}
