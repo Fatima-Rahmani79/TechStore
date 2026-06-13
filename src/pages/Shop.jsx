@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import ProductFilters from "../features/products/components/ProductFilters";
 import ProductGrid from "../features/products/components/ProductGrid";
 import { getProducts } from "../services/productsApi";
+import SearchBar from "../features/search/SearchBar";
 
 export default function Shop() {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchTerm, setSearchTerm] = useState("");
 
   // const [loading, setLoading] = useState(true);
 
@@ -35,6 +37,8 @@ export default function Shop() {
           Browse our collection of premium technology products.
         </p>
       </div>
+
+      <SearchBar search={searchTerm} onSearchTerm={setSearchTerm} />
 
       <ProductFilters
         products={products}
