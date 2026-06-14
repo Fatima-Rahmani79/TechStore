@@ -1,8 +1,15 @@
 import { X } from "lucide-react";
 import { useSearch } from "../../context/search/useSearch";
+import { useNavigate } from "react-router-dom";
 
 export default function SearchModal({ onClose }) {
   const { searchTerm, setSearchTerm } = useSearch();
+  const navigate = useNavigate();
+
+  function handleSearch() {
+    navigate("/shop");
+    onClose();
+  }
 
   return (
     <div className="fixed inset-0 z-50 bg-black/40">
@@ -20,6 +27,11 @@ export default function SearchModal({ onClose }) {
           placeholder="Search products..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleSearch();
+            }
+          }}
           className="w-full rounded-xl border px-4 py-3"
           autoFocus
         />
