@@ -3,7 +3,7 @@ import { Search, Heart, ShoppingCart } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
-  const { searchTerm, setSearchTerm } = useSearch();
+  // const { searchTerm, setSearchTerm } = useSearch();
   return (
     <header className="sticky w-full top-0 z-50 border-b border-neutral-200 bg-white/80 backdrop-blur-md">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
