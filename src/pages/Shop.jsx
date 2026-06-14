@@ -84,7 +84,7 @@ export default function Shop() {
       </div>
 
       <ProductFilters
-        products={products}
+        selectedCategory={selectedCategory}
         onSelectCategory={setSelectedCategory}
       />
 

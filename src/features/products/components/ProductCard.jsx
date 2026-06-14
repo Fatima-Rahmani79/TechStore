@@ -1,36 +1,41 @@
-import { HeartIcon } from "lucide-react";
+import { Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function ProductCard({ product }) {
   return (
-    <div
-      className="rounded-2xl
-        border
-        p-4
-        flex
-        flex-col
-        justify-between
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-lg"
-    >
-      <img
-        src={product.images[0]}
-        alt={product.name}
-        className="w-full object-contain"
-      />
-      <div className="flex flex-col justify-between">
-        <div className="mt-2">
-          <h3 className="min-h-[60px] text-lg font-semibold">{product.name}</h3>
-          <p className="mt-1 text-gray-600">${product.price}</p>
+    <Link to={`/products/${product.id}`}>
+      <article className="group overflow-hidden rounded-3xl border border-neutral-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent)]">
+        <div className="aspect-square overflow-hidden bg-neutral-100">
+          <img
+            src={product.images[0]}
+            alt={product.name}
+            className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+          />
         </div>
-        <div className="mt-2 flex justify-between gap-2 px-5 py-2 =">
-          <button className="btn-icon">
-            <HeartIcon size={18} />
-          </button>
-          <button className="btn-primary rounded-xl">View Product</button>
+
+        <div className="space-y-3 p-5">
+          <span className="inline-block rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-600">
+            {product.category}
+          </span>
+
+          <h3 className="line-clamp-2 text-lg font-semibold text-neutral-900">
+            {product.name}
+          </h3>
+
+          <p className="line-clamp-2 text-sm text-neutral-500">
+            {product.shortDesc}
+          </p>
+
+          <div className="flex items-center justify-between pt-2">
+            <span className="text-xl font-bold">${product.price}</span>
+
+            <button className="rounded-full border border-neutral-200 p-2 transition hover:bg-neutral-100">
+              <Heart size={18} />
+            </button>
+          </div>
+          <button className="btn-primary w-full">Add to Cart</button>
         </div>
-      </div>
-    </div>
+      </article>
+    </Link>
   );
 }

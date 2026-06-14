@@ -8,7 +8,7 @@ const categories = [
 
 export default function ProductFilters({ selectedCategory, onSelectCategory }) {
   return (
-    <div className="flex w-full flex-wrap justify-center gap-3 mb-6">
+    <div className="flex w-full flex-wrap justify-center gap-3 mb-6 ">
       {categories.map((category) => {
         const isActive = selectedCategory === category.value;
 

@@ -16,7 +16,7 @@ export default function SearchBar() {
         placeholder="Search products..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="h-12 w-full rounded-2xl border border-neutral-300 bg-white pl-11 pr-4 text-sm text-neutral-800 outline-none transition focus:border-black focus:ring-2 focus:ring-neutral-200"
+        className="h-12 w-full rounded-2xl border border-neutral-300 bg-white pl-11 pr-4 text-sm text-neutral-800 outline-none transition focus:border-[var(--accent)] focus:ring-[var(--accent)]"
       />
     </div>
   );

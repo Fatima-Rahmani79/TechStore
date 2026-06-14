@@ -11,7 +11,8 @@ export default function SortSelect({ sortBy, onSortBy }) {
       <select
         value={sortBy}
         onChange={(e) => onSortBy(e.target.value)}
-        className="h-12 w-full rounded-2xl border border-neutral-300 bg-white px-4 text-sm font-medium text-neutral-700 shadow-sm outline-none transition focus:border-black focus:ring-2 focus:ring-neutral-200 sm:w-auto"
+        className="h-12 w-full rounded-2xl border border-neutral-300 bg-white px-4 text-sm font-medium text-neutral-700 shadow-sm outline-none transition focus:border-[var(--accent)]
+focus:ring-[var(--accent)] sm:w-auto"
       >
         <option value="default">Default</option>
         <option value="name-asc">Name A-Z</option>
