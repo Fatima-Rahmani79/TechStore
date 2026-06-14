@@ -4,11 +4,13 @@ import ProductGrid from "../features/products/components/ProductGrid";
 import { getProducts } from "../services/productsApi";
 import SearchBar from "../features/search/SearchBar";
 import { useSearch } from "../context/search/useSearch";
+import EmptyState from "../components/ui/EmptyState";
+import { SearchX } from "lucide-react";
 
 export default function Shop() {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const { searchTerm } = useSearch();
+  const { searchTerm, setSearchTerm } = useSearch();
   // const [loading, setLoading] = useState(true);
 
   const filteredProducts = products.filter(
@@ -56,7 +58,26 @@ export default function Shop() {
         onSelectCategory={setSelectedCategory}
       />
 
-      <ProductGrid products={searchedProducts} />
+      {searchedProducts.length > 0 ? (
+        <ProductGrid products={searchedProducts} />
+      ) : (
+        <EmptyState
+          icon={<SearchX size={32} />}
+          title="No products found"
+          description={`No results found for "${searchTerm}".`}
+        >
+          <button
+            className="btn-primary"
+            onClick={() => {
+              setSearchTerm("");
+              setSelectedCategory("all");
+              // setSortBy("default");
+            }}
+          >
+            Clear Search
+          </button>
+        </EmptyState>
+      )}
     </div>
   );
 }
