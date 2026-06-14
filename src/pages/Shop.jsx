@@ -68,19 +68,20 @@ export default function Shop() {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12">
-      <div className="mb-10">
+      <div className="mb-10 space-y-3">
         <h1 className="text-4xl font-bold">Shop</h1>
-
-        <p className="mt-3 text-neutral-600">
+        <p className="text-neutral-600">
           Browse our collection of premium technology products.
         </p>
       </div>
 
-      <section className="flex justify-between items-center mb-10">
-        <SearchBar />
+      <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div className="w-full lg:max-w-2xl">
+          <SearchBar />
+        </div>
 
         <SortSelect sortBy={sortBy} onSortBy={setSortBy} />
-      </section>
+      </div>
 
       <ProductFilters
         products={products}
