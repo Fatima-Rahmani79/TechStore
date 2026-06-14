@@ -32,6 +32,8 @@ export default function Shop() {
     return searchableText.includes(searchTerm.toLowerCase());
   });
 
+  const sortedProducts =
+
   useEffect(() => {
     async function loadProducts() {
       const data = await getProducts();
