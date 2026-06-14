@@ -32,7 +32,28 @@ export default function Shop() {
     return searchableText.includes(searchTerm.toLowerCase());
   });
 
-  const sortedProducts =
+  const sortedProducts = [...searchedProducts];
+
+  switch (sortBy) {
+    case "name-asc":
+      sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
+      break;
+
+    case "name-desc":
+      sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
+      break;
+
+    case "price-asc":
+      sortedProducts.sort((a, b) => a.price - b.price);
+      break;
+
+    case "price-desc":
+      sortedProducts.sort((a, b) => b.price - a.price);
+      break;
+
+    default:
+      break;
+  }
 
   useEffect(() => {
     async function loadProducts() {
@@ -56,6 +77,7 @@ export default function Shop() {
       </div>
 
       <SearchBar />
+
       <SortSelect sortBy={sortBy} onSortBy={setSortBy} />
 
       <ProductFilters
@@ -64,7 +86,7 @@ export default function Shop() {
       />
 
       {searchedProducts.length > 0 ? (
-        <ProductGrid products={searchedProducts} />
+        <ProductGrid products={sortedProducts} />
       ) : (
         <EmptyState
           icon={<SearchX size={32} />}
