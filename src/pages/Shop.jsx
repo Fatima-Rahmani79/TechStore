@@ -76,9 +76,11 @@ export default function Shop() {
         </p>
       </div>
 
-      <SearchBar />
+      <section className="flex justify-between items-center mb-10">
+        <SearchBar />
 
-      <SortSelect sortBy={sortBy} onSortBy={setSortBy} />
+        <SortSelect sortBy={sortBy} onSortBy={setSortBy} />
+      </section>
 
       <ProductFilters
         products={products}
