@@ -6,11 +6,13 @@ import SearchBar from "../features/search/SearchBar";
 import { useSearch } from "../context/search/useSearch";
 import EmptyState from "../components/ui/EmptyState";
 import { SearchX } from "lucide-react";
+import SortSelect from "../features/sort/SortSelect";
 
 export default function Shop() {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const { searchTerm, setSearchTerm } = useSearch();
+  const [sortBy, setSortBy] = useState("default");
   // const [loading, setLoading] = useState(true);
 
   const filteredProducts = products.filter(
@@ -52,6 +54,7 @@ export default function Shop() {
       </div>
 
       <SearchBar />
+      <SortSelect sortBy={sortBy} onSortBy={setSortBy} />
 
       <ProductFilters
         products={products}
