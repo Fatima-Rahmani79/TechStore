@@ -3,12 +3,12 @@ import ProductFilters from "../features/products/components/ProductFilters";
 import ProductGrid from "../features/products/components/ProductGrid";
 import { getProducts } from "../services/productsApi";
 import SearchBar from "../features/search/SearchBar";
+import { useSearch } from "../context/search/useSearch";
 
 export default function Shop() {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [searchTerm, setSearchTerm] = useState("");
-
+  const { searchTerm } = useSearch();
   // const [loading, setLoading] = useState(true);
 
   const filteredProducts = products.filter(
@@ -49,7 +49,7 @@ export default function Shop() {
         </p>
       </div>
 
-      <SearchBar search={searchTerm} onSearchTerm={setSearchTerm} />
+      <SearchBar />
 
       <ProductFilters
         products={products}

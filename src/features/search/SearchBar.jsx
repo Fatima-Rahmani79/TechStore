@@ -1,6 +1,9 @@
 import { Search } from "lucide-react";
+import { useSearch } from "../../context/search/useSearch";
 
-export default function SearchBar({ searchTerm, onSearchTerm }) {
+export default function SearchBar() {
+  const { searchTerm, setSearchTerm } = useSearch();
+
   return (
     <div className="relative mb-8">
       <Search
@@ -12,7 +15,7 @@ export default function SearchBar({ searchTerm, onSearchTerm }) {
         type="text"
         placeholder="Search products..."
         value={searchTerm}
-        onChange={(e) => onSearchTerm(e.target.value)}
+        onChange={(e) => setSearchTerm(e.target.value)}
         className="w-full rounded-xl border border-neutral-300 py-3 pr-4 pl-11 outline-none transition focus:border-black"
       />
     </div>
