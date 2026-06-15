@@ -18,7 +18,7 @@ export default function AppRoutes() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/search" element={<Search />} />
-        <Route path="/products/:slug" element={<ProductDetails />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
 
         <Route path="*" element={<NotFound />} />
       </Route>
