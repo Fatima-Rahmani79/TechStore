@@ -1,12 +1,26 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getProducts } from "../services/productsApi.js";
+import { getProducts } from "../services/productsApi";
 import EmptyState from "../components/ui/EmptyState.jsx";
 
 export default function ProductDetails() {
   const { id } = useParams();
 
-  const products = getProducts();
-  const product = products.find((product) => product.id === Number(id));
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    async function loadProduct() {
+      const products = await getProducts();
+
+      const foundProduct = products.find(
+        (product) => product.id === Number(id),
+      );
+
+      setProduct(foundProduct);
+    }
+
+    loadProduct();
+  }, [id]);
 
   if (!product) {
     return (
