@@ -65,13 +65,42 @@ export default function ProductDetails() {
             ({product.rating.count} reviews)
           </span>
         </div>
-        <h1 className="text-4xl font-bold">{product.name}</h1>
 
-        <p className="text-neutral-500">{product.category}</p>
+        <div className="">
+          <h1 className="text-4xl font-bold">{product.name}</h1>
 
-        <p className="text-3xl font-bold">${product.price}</p>
+          <p className="text-neutral-500">{product.category}</p>
 
-        <p>{product.description}</p>
+          <p className="text-3xl font-bold">${product.price}</p>
+
+          <p>{product.description}</p>
+        </div>
+
+        <div className="flex justify-between border-b p-4">
+          <span>Processor</span>
+          <span>{product.processor}</span>
+        </div>
+
+        <div className="flex justify-between border-b p-4">
+          <span>Memory</span>
+          <span>{product.memory}</span>
+        </div>
+
+        <div className="flex justify-between border-b p-4">
+          <span>Storage</span>
+          <span>{product.storage}</span>
+        </div>
+
+        <div className="flex justify-between border-b p-4">
+          <span>Display</span>
+          <span>{product.display}</span>
+        </div>
+
+        <div className="flex justify-between p-4">
+          <span>Graphics</span>
+          <span>{product.graphics}</span>
+        </div>
+
         <button
           className="
             mt-6
@@ -87,6 +116,25 @@ export default function ProductDetails() {
         >
           Add to Cart
         </button>
+
+        {product.specialOffer && (
+          <span className="rounded-full bg-red-100 px-3 py-1 text-sm">
+            Special Offer
+          </span>
+        )}
+
+        {product.isNew && (
+          <span className="rounded-full bg-green-100 px-3 py-1 text-sm">
+            New
+          </span>
+        )}
+
+        {product.reviews.map((review) => (
+          <div key={review.date}>
+            <h4>{review.user}</h4>
+            <p>{review.comment}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
