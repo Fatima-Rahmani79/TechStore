@@ -11,6 +11,32 @@ export default function ProductDetails() {
 
   const [selectedImage, setSelectedImage] = useState("");
 
+  const specifications = [
+    { label: "Processor", value: product?.processor },
+    { label: "Memory", value: product?.memory },
+    { label: "Storage", value: product?.storage },
+    { label: "Display", value: product?.display },
+    { label: "Graphics", value: product?.graphics },
+
+    { label: "Size", value: product?.size },
+    { label: "Resolution", value: product?.resolution },
+    { label: "Refresh Rate", value: product?.refreshRate },
+    { label: "Panel Type", value: product?.panelType },
+
+    { label: "Type", value: product?.type },
+
+    {
+      label: "Connectivity",
+      value: Array.isArray(product?.connectivity)
+        ? product.connectivity.join(", ")
+        : product?.connectivity,
+    },
+
+    { label: "Battery Life", value: product?.batteryLife },
+
+    { label: "Color", value: product?.color },
+  ];
+
   useEffect(() => {
     async function loadProduct() {
       const products = await getProducts();
@@ -118,7 +144,7 @@ export default function ProductDetails() {
 
           <button
             className="
-            mt-8
+            my-8
             w-full
             rounded-2xl
             bg-[var(--accent)]
@@ -128,51 +154,30 @@ export default function ProductDetails() {
             text-black
             transition
             hover:opacity-90
+            cursor-pointer
           "
           >
             Add to Cart
           </button>
 
           {/* Specifications */}
-          <div className="mt-10 overflow-hidden rounded-3xl border border-neutral-200">
+          <div className="overflow-hidden rounded-3xl border border-neutral-200">
             <h2 className="border-b border-neutral-200 p-4 text-lg font-semibold">
               Specifications
             </h2>
 
-            <div className="flex justify-between border-b border-neutral-200 p-4">
-              <span className="text-neutral-500">Processor</span>
-              <span>{product.processor}</span>
-            </div>
+            {specifications
+              .filter((spec) => spec.value)
+              .map((spec) => (
+                <div
+                  key={spec.label}
+                  className="flex justify-between border-b border-neutral-200 p-4"
+                >
+                  <span className="text-neutral-500">{spec.label}</span>
 
-            <div className="flex justify-between border-b border-neutral-200 p-4">
-              <span className="text-neutral-500">Memory</span>
-              <span>{product.memory}</span>
-            </div>
-
-            <div className="flex justify-between border-b border-neutral-200 p-4">
-              <span className="text-neutral-500">Storage</span>
-              <span>{product.storage}</span>
-            </div>
-
-            <div className="flex justify-between border-b border-neutral-200 p-4">
-              <span className="text-neutral-500">Display</span>
-              <span>{product.display}</span>
-            </div>
-
-            <div className="flex justify-between border-b border-neutral-200 p-4">
-              <span className="text-neutral-500">Graphics</span>
-              <span>{product.graphics}</span>
-            </div>
-
-            <div className="flex justify-between border-b border-neutral-200 p-4">
-              <span className="text-neutral-500">Color</span>
-              <span>{product.color}</span>
-            </div>
-
-            <div className="flex justify-between p-4">
-              <span className="text-neutral-500">Stock</span>
-              <span>{product.stock} available</span>
-            </div>
+                  <span>{spec.value}</span>
+                </div>
+              ))}
           </div>
         </div>
       </div>
