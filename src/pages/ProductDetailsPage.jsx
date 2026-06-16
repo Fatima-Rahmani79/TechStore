@@ -39,107 +39,165 @@ export default function ProductDetails() {
   }
 
   return (
-    <div className="grid gap-12 lg:grid-cols-2">
-      <div>
-        <img
-          src={selectedImage}
-          alt={product.name}
-          className="w-full rounded-3xl"
-        />
+    <div className="mx-auto max-w-7xl px-6 py-12">
+      <div className="grid gap-12 lg:grid-cols-2">
+        {/* Images */}
+        <div>
+          <div className="overflow-hidden rounded-3xl border border-neutral-200 bg-white">
+            <img
+              src={selectedImage}
+              alt={product.name}
+              className="aspect-square w-full object-cover"
+            />
+          </div>
 
-        <div className="mt-4 flex gap-3">
-          {product.images.map((image) => (
-            <button key={image} onClick={() => setSelectedImage(image)}>
-              <img
-                src={image}
-                alt=""
-                className="h-20 w-20 rounded-xl object-cover"
-              />
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <div className="flex items-center gap-2">
-          <Star size={18} fill="currentColor" className="text-yellow-500" />
-
-          <span>{product.rating.average}</span>
-          <span className="text-neutral-500">
-            ({product.rating.count} reviews)
-          </span>
-        </div>
-
-        <div className="">
-          <h1 className="text-4xl font-bold">{product.name}</h1>
-
-          <p className="text-neutral-500">{product.category}</p>
-
-          <p className="text-3xl font-bold">${product.price}</p>
-
-          <p>{product.longDesc}</p>
+          <div className="mt-4 flex gap-3 overflow-x-auto">
+            {product.images.map((image) => (
+              <button
+                key={image}
+                onClick={() => setSelectedImage(image)}
+                className={`overflow-hidden rounded-xl border-2 transition ${
+                  selectedImage === image
+                    ? "border-[var(--accent)]"
+                    : "border-transparent"
+                }`}
+              >
+                <img
+                  src={image}
+                  alt={product.name}
+                  className="h-20 w-20 object-cover"
+                />
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="flex justify-between border-b p-4">
-          <span>Processor</span>
-          <span>{product.processor}</span>
-        </div>
+        {/* Product Info */}
+        <div>
+          <div className="flex flex-wrap gap-2">
+            {product.specialOffer && (
+              <span className="rounded-full bg-red-100 px-3 py-1 text-sm font-medium text-red-700">
+                Special Offer
+              </span>
+            )}
 
-        <div className="flex justify-between border-b p-4">
-          <span>Memory</span>
-          <span>{product.memory}</span>
-        </div>
+            {product.isNew && (
+              <span className="rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700">
+                New
+              </span>
+            )}
 
-        <div className="flex justify-between border-b p-4">
-          <span>Storage</span>
-          <span>{product.storage}</span>
-        </div>
+            {product.bestSeller && (
+              <span className="rounded-full bg-yellow-100 px-3 py-1 text-sm font-medium text-yellow-700">
+                Best Seller
+              </span>
+            )}
+          </div>
 
-        <div className="flex justify-between border-b p-4">
-          <span>Display</span>
-          <span>{product.display}</span>
-        </div>
+          <h1 className="mt-4 text-3xl font-bold lg:text-4xl">
+            {product.name}
+          </h1>
 
-        <div className="flex justify-between p-4">
-          <span>Graphics</span>
-          <span>{product.graphics}</span>
-        </div>
+          <p className="mt-2 text-neutral-500">
+            {product.brand} • {product.category}
+          </p>
 
-        <button
-          className="
-            mt-6
-            rounded-xl
+          <div className="mt-4 flex items-center gap-2">
+            <Star size={18} fill="currentColor" className="text-yellow-500" />
+
+            <span className="font-medium">{product.rating.average}</span>
+
+            <span className="text-neutral-500">
+              ({product.rating.count} reviews)
+            </span>
+          </div>
+
+          <p className="mt-6 text-4xl font-bold">${product.price}</p>
+
+          <p className="mt-6 leading-7 text-neutral-600">{product.longDesc}</p>
+
+          <button
+            className="
+            mt-8
+            w-full
+            rounded-2xl
             bg-[var(--accent)]
             px-6
-            py-3
+            py-4
             font-semibold
             text-black
             transition
             hover:opacity-90
           "
-        >
-          Add to Cart
-        </button>
+          >
+            Add to Cart
+          </button>
 
-        {product.specialOffer && (
-          <span className="rounded-full bg-red-100 px-3 py-1 text-sm">
-            Special Offer
-          </span>
-        )}
+          {/* Specifications */}
+          <div className="mt-10 overflow-hidden rounded-3xl border border-neutral-200">
+            <h2 className="border-b border-neutral-200 p-4 text-lg font-semibold">
+              Specifications
+            </h2>
 
-        {product.isNew && (
-          <span className="rounded-full bg-green-100 px-3 py-1 text-sm">
-            New
-          </span>
-        )}
+            <div className="flex justify-between border-b border-neutral-200 p-4">
+              <span className="text-neutral-500">Processor</span>
+              <span>{product.processor}</span>
+            </div>
 
-        {product.reviews.map((review) => (
-          <div key={review.date}>
-            <h4>{review.user}</h4>
-            <p>{review.comment}</p>
+            <div className="flex justify-between border-b border-neutral-200 p-4">
+              <span className="text-neutral-500">Memory</span>
+              <span>{product.memory}</span>
+            </div>
+
+            <div className="flex justify-between border-b border-neutral-200 p-4">
+              <span className="text-neutral-500">Storage</span>
+              <span>{product.storage}</span>
+            </div>
+
+            <div className="flex justify-between border-b border-neutral-200 p-4">
+              <span className="text-neutral-500">Display</span>
+              <span>{product.display}</span>
+            </div>
+
+            <div className="flex justify-between border-b border-neutral-200 p-4">
+              <span className="text-neutral-500">Graphics</span>
+              <span>{product.graphics}</span>
+            </div>
+
+            <div className="flex justify-between border-b border-neutral-200 p-4">
+              <span className="text-neutral-500">Color</span>
+              <span>{product.color}</span>
+            </div>
+
+            <div className="flex justify-between p-4">
+              <span className="text-neutral-500">Stock</span>
+              <span>{product.stock} available</span>
+            </div>
           </div>
-        ))}
+        </div>
       </div>
+
+      {/* Reviews */}
+      <section className="mt-16">
+        <h2 className="mb-6 text-2xl font-bold">Customer Reviews</h2>
+
+        <div className="space-y-4">
+          {product.reviews.map((review, index) => (
+            <div
+              key={`${review.user}-${index}`}
+              className="rounded-3xl border border-neutral-200 p-5"
+            >
+              <div className="flex items-center justify-between">
+                <h3 className="font-semibold">{review.user}</h3>
+
+                <span className="text-sm text-neutral-500">{review.date}</span>
+              </div>
+
+              <p className="mt-3 text-neutral-600">{review.comment}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
