@@ -9,7 +9,7 @@ export default function ProductDetails() {
 
   const [product, setProduct] = useState(null);
 
-  const [selectedImage, setSelectedImage] = useState();
+  const [selectedImage, setSelectedImage] = useState("");
 
   useEffect(() => {
     async function loadProduct() {
@@ -20,6 +20,10 @@ export default function ProductDetails() {
       );
 
       setProduct(foundProduct);
+
+      if (foundProduct) {
+        setSelectedImage(foundProduct.images[0]);
+      }
     }
 
     loadProduct();
@@ -60,7 +64,7 @@ export default function ProductDetails() {
         <div className="flex items-center gap-2">
           <Star size={18} fill="currentColor" className="text-yellow-500" />
 
-          <span>{product.rating.avarage}</span>
+          <span>{product.rating.average}</span>
           <span className="text-neutral-500">
             ({product.rating.count} reviews)
           </span>
@@ -73,7 +77,7 @@ export default function ProductDetails() {
 
           <p className="text-3xl font-bold">${product.price}</p>
 
-          <p>{product.description}</p>
+          <p>{product.longDesc}</p>
         </div>
 
         <div className="flex justify-between border-b p-4">
