@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProducts } from "../services/productsApi";
 import EmptyState from "../components/ui/EmptyState.jsx";
+import { Star } from "lucide-react";
 
 export default function ProductDetails() {
   const { id } = useParams();
 
   const [product, setProduct] = useState(null);
+
+  const [selectedImage, setSelectedImage] = useState();
 
   useEffect(() => {
     async function loadProduct() {
@@ -33,12 +36,35 @@ export default function ProductDetails() {
 
   return (
     <div className="grid gap-12 lg:grid-cols-2">
-      <img
-        src={product.image}
-        alt={product.name}
-        className="w-full rounded-3xl"
-      />
       <div>
+        <img
+          src={selectedImage}
+          alt={product.name}
+          className="w-full rounded-3xl"
+        />
+
+        <div className="mt-4 flex gap-3">
+          {product.images.map((image) => (
+            <button key={image} onClick={() => setSelectedImage(image)}>
+              <img
+                src={image}
+                alt=""
+                className="h-20 w-20 rounded-xl object-cover"
+              />
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <div className="flex items-center gap-2">
+          <Star size={18} fill="currentColor" className="text-yellow-500" />
+
+          <span>{product.rating.avarage}</span>
+          <span className="text-neutral-500">
+            ({product.rating.count} reviews)
+          </span>
+        </div>
         <h1 className="text-4xl font-bold">{product.name}</h1>
 
         <p className="text-neutral-500">{product.category}</p>
@@ -48,16 +74,16 @@ export default function ProductDetails() {
         <p>{product.description}</p>
         <button
           className="
-    mt-6
-    rounded-xl
-    bg-[var(--accent)]
-    px-6
-    py-3
-    font-semibold
-    text-black
-    transition
-    hover:opacity-90
-  "
+            mt-6
+            rounded-xl
+            bg-[var(--accent)]
+            px-6
+            py-3
+            font-semibold
+            text-black
+            transition
+            hover:opacity-90
+          "
         >
           Add to Cart
         </button>
