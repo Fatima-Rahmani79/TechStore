@@ -43,11 +43,11 @@ export default function ProductDetails() {
       <div className="grid gap-12 lg:grid-cols-2">
         {/* Images */}
         <div>
-          <div className="overflow-hidden rounded-3xl border border-neutral-200 bg-white">
+          <div className="overflow-hidden rounded-3xl">
             <img
               src={selectedImage}
               alt={product.name}
-              className="aspect-square w-full object-cover"
+              className="aspect-square w-full"
             />
           </div>
 
