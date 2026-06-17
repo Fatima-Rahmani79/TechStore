@@ -1,0 +1,1254 @@
+[
+  {
+    "id": 1,
+    "shortName": "Laptop HP OmniBook 5 16- Intel® Core™ i5",
+    "name": "Laptop HP OmniBook 5 16- Intel® Core™ i5",
+    "memory": "16GB RAM",
+    "storage": "512GB SSD",
+    "processor": "Intel® Core™ i5",
+    "display": "16 inch Full-HD",
+    "graphics": "Intel Iris Xe Graphics",
+    "touchscreen": false,
+    "color": "Silver",
+    "brand": "HP",
+    "category": "laptop",
+    "stock": 12,
+    "images": [
+      "/images/hp-omniBook-1.avif",
+      "/images/hp-omniBook-2.webp",
+      "/images/hp-omniBook-3.avif"
+    ],
+    "price": 400,
+    "currency": "USD",
+    "shortDesc": "A versatile laptop built for productivity, entertainment, and everyday performance.",
+    "longDesc": "Laptop HP OmniBook 5 16- Intel® Core™ i5 delivers dependable performance with modern hardware, a quality display, and a design suited for work, study, and entertainment. It provides smooth multitasking, responsive performance, and a comfortable user experience for everyday computing.",
+    "rating": {
+      "average": 4.1,
+      "count": 23
+    },
+    "reviews": [
+      {
+        "user": "Ali",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 5,
+        "date": "2025-09-08"
+      },
+      {
+        "user": "Sara",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 3,
+        "date": "2025-09-07"
+      }
+    ],
+    "specialOffer": true,
+    "bestSeller": false,
+    "relatedProducts": [2, 3],
+    "slug": "laptop-hp-omnibook-5-16-intel-core-i5",
+    "isNew": false,
+    "featured": false,
+    "tags": ["laptop", "hp"]
+  },
+  {
+    "id": 2,
+    "shortName": "Laptop HP OmniBook 5 16- Intel® Core™ i5",
+    "name": "Laptop HP OmniBook 5 16- Intel® Core™ i5",
+    "memory": "16GB RAM",
+    "storage": "512GB SSD",
+    "processor": "Intel® Core™ i5",
+    "display": "15.6 inch Full-HD",
+    "graphics": "Intel Iris Xe Graphics",
+    "touchscreen": false,
+    "color": "white",
+    "brand": "HP",
+    "category": "laptop",
+    "stock": 5,
+    "images": [
+      "/images/hp-proBook-1.avif",
+      "/images/hp-proBook-2.avif",
+      "/images/hp-proBook-3.avif"
+    ],
+    "price": 890,
+    "currency": "USD",
+    "shortDesc": "A versatile laptop built for productivity, entertainment, and everyday performance.",
+    "longDesc": "Laptop HP OmniBook 5 16- Intel® Core™ i5 delivers dependable performance with modern hardware, a quality display, and a design suited for work, study, and entertainment. It provides smooth multitasking, responsive performance, and a comfortable user experience for everyday computing.",
+    "rating": {
+      "average": 4.5,
+      "count": 128
+    },
+    "reviews": [
+      {
+        "user": "Taheri",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 5,
+        "date": "2025-02-21"
+      },
+      {
+        "user": "Ehsan",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 3.8,
+        "date": "2025-07-07"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": true,
+    "relatedProducts": [1, 3],
+    "slug": "laptop-hp-omnibook-5-16-intel-core-i5",
+    "isNew": false,
+    "featured": false,
+    "tags": ["laptop", "hp"]
+  },
+  {
+    "id": 3,
+    "shortName": "HP Pavilion 14 x360 Laptop",
+    "name": "HP Pavilion 14 x360 Laptop - Intel® Core™ i5, 8GB, Touchscreen",
+    "memory": "8GB RAM",
+    "storage": "512GB SSD",
+    "processor": "Intel® Core™ i5 1335U (13th Generation)",
+    "display": "14 inch Full-HD Touchscreen",
+    "graphics": "Intel Iris Xe Graphics",
+    "touchscreen": true,
+    "color": "white",
+    "brand": "HP",
+    "category": "laptop",
+    "stock": 8,
+    "images": [
+      "/images/hp-pavilion-1.webp",
+      "/images/hp-pavilion-2.avif",
+      "/images/hp-pavilion-3.webp",
+      "/images/hp-pavilion-4.webp"
+    ],
+    "price": 600,
+    "currency": "USD",
+    "shortDesc": "A versatile laptop built for productivity, entertainment, and everyday performance.",
+    "longDesc": "HP Pavilion 14 x360 Laptop - Intel® Core™ i5, 8GB, Touchscreen delivers dependable performance with modern hardware, a quality display, and a design suited for work, study, and entertainment. It provides smooth multitasking, responsive performance, and a comfortable user experience for everyday computing.",
+    "rating": {
+      "average": 4.4,
+      "count": 42
+    },
+    "reviews": [
+      {
+        "user": "Narges",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4.5,
+        "date": "2024-12-21"
+      },
+      {
+        "user": "Masoud",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4,
+        "date": "2025-05-18"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [1, 2],
+    "slug": "hp-pavilion-14-x360-laptop-intel-core-i5-8gb-touchscreen",
+    "isNew": false,
+    "featured": false,
+    "tags": ["laptop", "hp"]
+  },
+  {
+    "id": 4,
+    "shortName": "OMEN Gaming Laptop 17-db0012na",
+    "name": "OMEN Gaming Laptop 17-db0012na - NVIDIA® GeForce RTX™ 4070",
+    "memory": "16GB RAM",
+    "storage": "1TB SSD",
+    "processor": "AMD Ryzen™ 7 8845HS",
+    "display": "17 inch QHD 165Hz",
+    "graphics": "NVIDIA® GeForce RTX™ 4070 (8 GB)",
+    "touchscreen": false,
+    "color": "black",
+    "brand": "HP",
+    "category": "laptop",
+    "stock": 14,
+    "images": [
+      "/images/hp-OMENGaming-1.webp",
+      "/images/hp-OMENGaming-2.webp",
+      "/images/hp-OMENGaming-3.webp"
+    ],
+    "price": 1499,
+    "currency": "USD",
+    "shortDesc": "A versatile laptop built for productivity, entertainment, and everyday performance.",
+    "longDesc": "OMEN Gaming Laptop 17-db0012na - NVIDIA® GeForce RTX™ 4070 delivers dependable performance with modern hardware, a quality display, and a design suited for work, study, and entertainment. It provides smooth multitasking, responsive performance, and a comfortable user experience for everyday computing.",
+    "rating": {
+      "average": 3.2,
+      "count": 6
+    },
+    "reviews": [
+      {
+        "user": "Baran",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 3,
+        "date": "2025-03-10"
+      },
+      {
+        "user": "Temor",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 2.5,
+        "date": "2025-05-16"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [5, 6],
+    "slug": "omen-gaming-laptop-17-db0012na-nvidia-geforce-rtx-4070",
+    "isNew": false,
+    "featured": false,
+    "tags": ["laptop", "hp"]
+  },
+  {
+    "id": 5,
+    "shortName": "Dell 14 Premium Laptop",
+    "name": "Dell 14 Premium Laptop",
+    "memory": "32 GB LPDDR5X",
+    "storage": "1TB SSD",
+    "processor": "Intel® Core™ Ultra 7 255H, 16 cores",
+    "display": "14.5 inch 3.2K OLED",
+    "graphics": "NVIDIA® GeForce RTX™ 4050",
+    "touchscreen": false,
+    "color": "white",
+    "brand": "DELL",
+    "category": "laptop",
+    "stock": 12,
+    "images": [
+      "/images/dell-14-premium-1.avif",
+      "/images/dell-14-premium-2.avif",
+      "/images/dell-14-premium-3.avif"
+    ],
+    "price": 1400,
+    "currency": "USD",
+    "shortDesc": "A versatile laptop built for productivity, entertainment, and everyday performance.",
+    "longDesc": "Dell 14 Premium Laptop delivers dependable performance with modern hardware, a quality display, and a design suited for work, study, and entertainment. It provides smooth multitasking, responsive performance, and a comfortable user experience for everyday computing.",
+    "rating": {
+      "average": 3.8,
+      "count": 14
+    },
+    "reviews": [
+      {
+        "user": "Mansor",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4,
+        "date": "2025-06-01"
+      },
+      {
+        "user": "Zahra",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 3.5,
+        "date": "2025-01-07"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [4, 6],
+    "slug": "dell-14-premium-laptop",
+    "isNew": false,
+    "featured": false,
+    "tags": ["laptop", "dell"]
+  },
+  {
+    "id": 6,
+    "shortName": "Dell 15 Laptop",
+    "name": "Dell 15 Laptop",
+    "memory": "8GB RAM",
+    "storage": "512GB SSD",
+    "processor": "Intel® Core™ 3 100U",
+    "display": "15.6 inch Full-HD",
+    "graphics": "Intel® UHD Graphics",
+    "touchscreen": false,
+    "color": "white",
+    "brand": "DELL",
+    "category": "laptop",
+    "stock": 20,
+    "images": [
+      "/images/dell-15-1.avif",
+      "/images/dell-15-2.avif",
+      "/images/dell-15-3.avif"
+    ],
+    "price": 330,
+    "currency": "USD",
+    "shortDesc": "A versatile laptop built for productivity, entertainment, and everyday performance.",
+    "longDesc": "Dell 15 Laptop delivers dependable performance with modern hardware, a quality display, and a design suited for work, study, and entertainment. It provides smooth multitasking, responsive performance, and a comfortable user experience for everyday computing.",
+    "rating": {
+      "average": 4.6,
+      "count": 52
+    },
+    "reviews": [
+      {
+        "user": "Faez",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4.5,
+        "date": "2025-08-21"
+      },
+      {
+        "user": "Tamana",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4,
+        "date": "2025-07-11"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [4, 5],
+    "slug": "dell-15-laptop",
+    "isNew": false,
+    "featured": true,
+    "tags": ["laptop", "dell"]
+  },
+  {
+    "id": 7,
+    "shortName": "Dell 16 Laptop",
+    "name": "Dell 16 Laptop",
+    "memory": "16GB RAM DDR5",
+    "storage": "1TB SSD",
+    "processor": "Intel® Core™ 7-150U, 10 cores",
+    "display": "16 Touch FHD+",
+    "graphics": "Intel® Graphics",
+    "touchscreen": true,
+    "color": "white",
+    "brand": "DELL",
+    "category": "laptop",
+    "stock": 16,
+    "images": [
+      "/images/dell-16-1.avif",
+      "/images/dell-16-2.avif",
+      "/images/dell-16-3.avif"
+    ],
+    "price": 550,
+    "currency": "USD",
+    "shortDesc": "A versatile laptop built for productivity, entertainment, and everyday performance.",
+    "longDesc": "Dell 16 Laptop delivers dependable performance with modern hardware, a quality display, and a design suited for work, study, and entertainment. It provides smooth multitasking, responsive performance, and a comfortable user experience for everyday computing.",
+    "rating": {
+      "average": 2.9,
+      "count": 22
+    },
+    "reviews": [
+      {
+        "user": "Nahid",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 2.7,
+        "date": "2025-07-21"
+      }
+    ],
+    "specialOffer": true,
+    "offerHours": 12,
+    "bestSeller": false,
+    "relatedProducts": [8, 9],
+    "slug": "dell-16-laptop",
+    "isNew": false,
+    "featured": false,
+    "tags": ["laptop", "dell"]
+  },
+  {
+    "id": 8,
+    "shortName": "Asus ProArt PZ13 (HT5306)",
+    "name": "Asus ProArt PZ13 (HT5306)",
+    "memory": "16GB RAM",
+    "storage": "1TB SSD",
+    "processor": "Snapdragon® processor",
+    "display": "13.3 inch 3K OLED 16:10 display",
+    "graphics": "Adreno™ GPU",
+    "touchscreen": true,
+    "color": "black",
+    "brand": "ASUS",
+    "category": "laptop",
+    "stock": 7,
+    "images": [
+      "/images/asus-proArtPZ13-1.png",
+      "/images/asus-proArtPZ13-2.png",
+      "/images/asus-proArtPZ13-3.png",
+      "/images/asus-proArtPZ13-4.png"
+    ],
+    "price": 1200,
+    "currency": "USD",
+    "shortDesc": "A versatile laptop built for productivity, entertainment, and everyday performance.",
+    "longDesc": "Asus ProArt PZ13 (HT5306) delivers dependable performance with modern hardware, a quality display, and a design suited for work, study, and entertainment. It provides smooth multitasking, responsive performance, and a comfortable user experience for everyday computing.",
+    "rating": {
+      "average": 4,
+      "count": 10
+    },
+    "reviews": [
+      {
+        "user": "Sina",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4,
+        "date": "2024-12-21"
+      },
+      {
+        "user": "Ehsan",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4,
+        "date": "2025-04-07"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [7, 9],
+    "slug": "asus-proart-pz13-ht5306",
+    "isNew": false,
+    "featured": false,
+    "tags": ["laptop", "asus"]
+  },
+  {
+    "id": 9,
+    "shortName": "Lenovo 3i Chromebook (15” Intel) ",
+    "name": "Lenovo 3i Chromebook (15” Intel) ",
+    "memory": "8GB RAM",
+    "storage": "128GB SSD",
+    "processor": "Intel® Celeron® N4500 Processor",
+    "display": "15.6 inch Full-HD",
+    "graphics": " Intel® UHD Graphics",
+    "touchscreen": false,
+    "color": "black",
+    "brand": "Lenovo",
+    "category": "laptop",
+    "stock": 22,
+    "images": [
+      "/images/lenovo-chromebook-1.webp",
+      "/images/lenovo-chromebook-2.webp",
+      "/images/lenovo-chromebook-3.avif"
+    ],
+    "price": 250,
+    "currency": "USD",
+    "shortDesc": "A versatile laptop built for productivity, entertainment, and everyday performance.",
+    "longDesc": "Lenovo 3i Chromebook (15” Intel)  delivers dependable performance with modern hardware, a quality display, and a design suited for work, study, and entertainment. It provides smooth multitasking, responsive performance, and a comfortable user experience for everyday computing.",
+    "rating": {
+      "average": 4.5,
+      "count": 44
+    },
+    "reviews": [
+      {
+        "user": "Sana",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 5,
+        "date": "2025-09-11"
+      },
+      {
+        "user": "Reza",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 3.8,
+        "date": "2025-02-01"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [7, 8],
+    "slug": "lenovo-3i-chromebook-15-intel",
+    "isNew": false,
+    "featured": false,
+    "tags": ["laptop", "lenovo"]
+  },
+  {
+    "id": 10,
+    "shortName": "Dell 32 Curved Gaming Monitor – S3222DGM",
+    "name": "Dell 32 Curved Gaming Monitor – S3222DGM",
+    "size": "32 inch",
+    "resolution": "QHD 2560 x 1440",
+    "refreshRate": "165 Hz",
+    "panelType": "VA",
+    "ports": ["HDMI", "VGA"],
+    "color": "black",
+    "brand": "DELL",
+    "category": "monitor",
+    "stock": 15,
+    "images": [
+      "/images/monitor-dell32CurvedGaming-1.avif",
+      "/images/monitor-dell32CurvedGaming-2.avif",
+      "/images/monitor-dell32CurvedGaming-3.avif"
+    ],
+    "price": 330,
+    "currency": "USD",
+    "shortDesc": "A high-quality monitor designed for work, entertainment, and immersive visuals.",
+    "longDesc": "Dell 32 Curved Gaming Monitor – S3222DGM offers sharp image quality, reliable performance, and a comfortable viewing experience. Its modern display technology makes it suitable for productivity, content consumption, and extended daily use.",
+    "rating": {
+      "average": 4.7,
+      "count": 48
+    },
+    "reviews": [
+      {
+        "user": "Hamed",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4,
+        "date": "2025-06-15"
+      },
+      {
+        "user": "Lina",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 3.5,
+        "date": "2025-03-22"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [11, 12],
+    "slug": "dell-32-curved-gaming-monitor-s3222dgm",
+    "isNew": false,
+    "featured": false,
+    "tags": ["monitor", "dell"]
+  },
+  {
+    "id": 11,
+    "shortName": "Dell UltraSharp 34 Curved Thunderbolt™ Hub Monitor",
+    "name": "Dell UltraSharp 34 Curved Thunderbolt™ Hub Monitor - U3425WE",
+    "size": "34 inch",
+    "resolution": "3440 x 1440 at 120 Hz",
+    "refreshRate": "165 Hz",
+    "panelType": "VA",
+    "ports": ["HDMI", "DP"],
+    "color": "white",
+    "brand": "DELL",
+    "category": "monitor",
+    "stock": 10,
+    "images": [
+      "/images/monitor-dell-ultrasharp-1.avif",
+      "/images/monitor-dell-ultrasharp-2.avif",
+      "/images/monitor-dell-ultrasharp-3.avif"
+    ],
+    "price": 890,
+    "currency": "USD",
+    "shortDesc": "A high-quality monitor designed for work, entertainment, and immersive visuals.",
+    "longDesc": "Dell UltraSharp 34 Curved Thunderbolt™ Hub Monitor - U3425WE offers sharp image quality, reliable performance, and a comfortable viewing experience. Its modern display technology makes it suitable for productivity, content consumption, and extended daily use.",
+    "rating": {
+      "average": 3.1,
+      "count": 20
+    },
+    "reviews": [
+      {
+        "user": "Amir",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 2,
+        "date": "2025-07-15"
+      },
+      {
+        "user": "Ali",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4.2,
+        "date": "2025-03-22"
+      }
+    ],
+    "specialOffer": true,
+    "offerHours": 48,
+    "bestSeller": false,
+    "relatedProducts": [10, 12],
+    "slug": "dell-ultrasharp-34-curved-thunderbolt-hub-monitor-u3425we",
+    "isNew": false,
+    "featured": true,
+    "tags": ["monitor", "dell"]
+  },
+  {
+    "id": 12,
+    "shortName": "Samsung  Odyssey Neo G7",
+    "name": "Samsung  Odyssey Neo G7 - Quantum HDR2000 Curved Gaming Monitor",
+    "size": "32 inch",
+    "resolution": "3840 x 2160 (UHD)",
+    "refreshRate": "165Hz",
+    "panelType": "IPS",
+    "ports": ["HDMI", "VGA"],
+    "color": "black",
+    "brand": "Samsung",
+    "category": "monitor",
+    "stock": 10,
+    "images": [
+      "/images/monitor-odysseyNeoG7-1.webp",
+      "/images/monitor-odysseyNeoG7-2.webp",
+      "/images/monitor-odysseyNeoG7-3.webp"
+    ],
+    "price": 649,
+    "currency": "USD",
+    "shortDesc": "A high-quality monitor designed for work, entertainment, and immersive visuals.",
+    "longDesc": "Samsung  Odyssey Neo G7 - Quantum HDR2000 Curved Gaming Monitor offers sharp image quality, reliable performance, and a comfortable viewing experience. Its modern display technology makes it suitable for productivity, content consumption, and extended daily use.",
+    "rating": {
+      "average": 4.6,
+      "count": 18
+    },
+    "reviews": [
+      {
+        "user": "Aslan",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4.5,
+        "date": "2025-08-10"
+      },
+      {
+        "user": "Hesam",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4,
+        "date": "2025-01-22"
+      }
+    ],
+    "specialOffer": true,
+    "bestSeller": false,
+    "relatedProducts": [10, 11],
+    "slug": "samsung-odyssey-neo-g7-quantum-hdr2000-curved-gaming-monitor",
+    "isNew": false,
+    "featured": false,
+    "tags": ["monitor", "samsung"]
+  },
+  {
+    "id": 13,
+    "shortName": "ViewFinity S8 (S80UD) 4K UHD HDR10 Monitor",
+    "name": "ViewFinity S8 (S80UD) 4K UHD HDR10 Monitor",
+    "size": "37 inch",
+    "resolution": "3840 x 2160 (UHD)",
+    "refreshRate": "165Hz",
+    "panelType": "IPS",
+    "ports": ["HDMI", "VGA"],
+    "color": "black",
+    "brand": "Samsung",
+    "category": "monitor",
+    "stock": 10,
+    "images": [
+      "/images/monitor-viewfinity-s8-1.webp",
+      "/images/monitor-viewfinity-s8-2.webp",
+      "/images/monitor-viewfinity-s8-3.webp"
+    ],
+    "price": 430,
+    "currency": "USD",
+    "shortDesc": "A high-quality monitor designed for work, entertainment, and immersive visuals.",
+    "longDesc": "ViewFinity S8 (S80UD) 4K UHD HDR10 Monitor offers sharp image quality, reliable performance, and a comfortable viewing experience. Its modern display technology makes it suitable for productivity, content consumption, and extended daily use.",
+    "rating": {
+      "average": 4.6,
+      "count": 18
+    },
+    "reviews": [
+      {
+        "user": "Mohammad",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 5,
+        "date": "2025-09-10"
+      },
+      {
+        "user": "Hesam",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 5,
+        "date": "2025-06-22"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [14, 11],
+    "slug": "viewfinity-s8-s80ud-4k-uhd-hdr10-monitor",
+    "isNew": false,
+    "featured": false,
+    "tags": ["monitor", "samsung"]
+  },
+  {
+    "id": 14,
+    "shortName": "HP Series 5 23.8 Inch FHD White Monitor",
+    "name": "HP Series 5 23.8 Inch FHD White Monitor - 524sw",
+    "size": "23.8 inch",
+    "resolution": "1920 x 1080 (FHD)",
+    "refreshRate": "165Hz",
+    "panelType": "IPS",
+    "ports": ["HDMI", "VGA"],
+    "color": "white",
+    "brand": "HP",
+    "category": "monitor",
+    "stock": 16,
+    "images": [
+      "/images/mnitor-HP-Series5-1.avif",
+      "/images/mnitor-HP-Series5-2.webp",
+      "/images/mnitor-HP-Series5-3.avif"
+    ],
+    "price": 110,
+    "currency": "USD",
+    "shortDesc": "A high-quality monitor designed for work, entertainment, and immersive visuals.",
+    "longDesc": "HP Series 5 23.8 Inch FHD White Monitor - 524sw offers sharp image quality, reliable performance, and a comfortable viewing experience. Its modern display technology makes it suitable for productivity, content consumption, and extended daily use.",
+    "rating": {
+      "average": 4.7,
+      "count": 20
+    },
+    "reviews": [
+      {
+        "user": "Mahsa",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4.5,
+        "date": "2025-08-18"
+      },
+      {
+        "user": "Farhad",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 5,
+        "date": "2025-06-22"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": true,
+    "relatedProducts": [13, 11],
+    "slug": "hp-series-5-23-8-inch-fhd-white-monitor-524sw",
+    "isNew": false,
+    "featured": false,
+    "tags": ["monitor", "hp"]
+  },
+  {
+    "id": 15,
+    "shortName": "Sony WH-1000XM5 Wireless Noise-Canceling Overhead Headphones",
+    "name": "Sony WH-1000XM5 Wireless Noise-Canceling Overhead Headphones",
+    "connectivity": "Wireless (Bluetooth)",
+    "batteryLife": "30 hours",
+    "color": "black",
+    "brand": "Sony",
+    "category": "audio",
+    "stock": 25,
+    "images": [
+      "/images/audio-sonyWH1000XM5-1.webp",
+      "/images/audio-sonyWH1000XM5-2.webp",
+      "/images/audio-sonyWH1000XM5-3.webp"
+    ],
+    "price": 350,
+    "currency": "USD",
+    "shortDesc": "Wireless audio with comfort, clear sound, and all-day usability.",
+    "longDesc": "Sony WH-1000XM5 Wireless Noise-Canceling Overhead Headphones combines comfort, reliable connectivity, and high-quality audio performance. Whether for music, calls, gaming, or travel, it delivers a balanced listening experience throughout the day.",
+    "rating": {
+      "average": 4.8,
+      "count": 150
+    },
+    "reviews": [
+      {
+        "user": "Reza",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 5,
+        "date": "2025-05-10"
+      },
+      {
+        "user": "Nina",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4.5,
+        "date": "2025-03-15"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [16, 17],
+    "slug": "sony-wh-1000xm5-wireless-noise-canceling-overhead-headphones",
+    "isNew": false,
+    "featured": true,
+    "tags": ["audio", "sony"]
+  },
+  {
+    "id": 16,
+    "shortName": "HP Stereo USB Headset G2",
+    "name": "HP Stereo USB Headset G2",
+    "type": "Overhead",
+    "connectivity": "Wireless (Bluetooth)",
+    "batteryLife": "30 hours",
+    "color": "black",
+    "brand": "HP",
+    "category": "audio",
+    "stock": 32,
+    "images": [
+      "/images/audio-Headset-G2-1.webp",
+      "/images/audio-Headset-G2-2.webp"
+    ],
+    "price": 20,
+    "currency": "USD",
+    "shortDesc": "Wireless audio with comfort, clear sound, and all-day usability.",
+    "longDesc": "HP Stereo USB Headset G2 combines comfort, reliable connectivity, and high-quality audio performance. Whether for music, calls, gaming, or travel, it delivers a balanced listening experience throughout the day.",
+    "rating": {
+      "average": 4.8,
+      "count": 150
+    },
+    "reviews": [
+      {
+        "user": "hasib",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 5,
+        "date": "2025-05-10"
+      },
+      {
+        "user": "Ahmad",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4.5,
+        "date": "2025-03-15"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [15, 17],
+    "slug": "hp-stereo-usb-headset-g2",
+    "isNew": false,
+    "featured": false,
+    "tags": ["audio", "hp"]
+  },
+  {
+    "id": 17,
+    "shortName": "HyperX Cloud MIX 2",
+    "name": "HyperX Cloud MIX 2 - Gaming Headset",
+    "connectivity": ["Wireless (Bluetooth)", "Wired (3.5mm)"],
+    "batteryLife": "30 hours",
+    "color": "black",
+    "brand": "HP",
+    "category": "audio",
+    "stock": 28,
+    "images": [
+      "/images/audio-HyperX-Cloud-1.webp",
+      "/images/audio-HyperX-Cloud-2.webp",
+      "/images/audio-HyperX-Cloud-3.webp",
+      "/images/audio-HyperX-Cloud-4.webp"
+    ],
+    "price": 100,
+    "currency": "USD",
+    "shortDesc": "Wireless audio with comfort, clear sound, and all-day usability.",
+    "longDesc": "HyperX Cloud MIX 2 - Gaming Headset combines comfort, reliable connectivity, and high-quality audio performance. Whether for music, calls, gaming, or travel, it delivers a balanced listening experience throughout the day.",
+    "rating": {
+      "average": 3,
+      "count": 40
+    },
+    "reviews": [
+      {
+        "user": "Hadya",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 3,
+        "date": "2025-05-10"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": true,
+    "relatedProducts": [16, 17],
+    "slug": "hyperx-cloud-mix-2-gaming-headset",
+    "isNew": false,
+    "featured": false,
+    "tags": ["audio", "hp"]
+  },
+  {
+    "id": 18,
+    "shortName": "Poly Voyager Free 60 Earbuds",
+    "name": "Poly Voyager Free 60 Earbuds",
+    "connectivity": "Wireless (Bluetooth)",
+    "batteryLife": "50 hours",
+    "color": "black",
+    "brand": "HP",
+    "category": "audio",
+    "stock": 30,
+    "images": [
+      "/images/audio-PolyVoyager-1.webp",
+      "/images/audio-PolyVoyager-2.webp",
+      "/images/audio-PolyVoyager-3.webp"
+    ],
+    "price": 139,
+    "currency": "USD",
+    "shortDesc": "Wireless audio with comfort, clear sound, and all-day usability.",
+    "longDesc": "Poly Voyager Free 60 Earbuds combines comfort, reliable connectivity, and high-quality audio performance. Whether for music, calls, gaming, or travel, it delivers a balanced listening experience throughout the day.",
+    "rating": {
+      "average": 4.9,
+      "count": 14
+    },
+    "reviews": [
+      {
+        "user": "Madina",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 5,
+        "date": "2025-08-10"
+      },
+      {
+        "user": "Kiana",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 2,
+        "date": "2025-06-15"
+      }
+    ],
+    "specialOffer": true,
+    "bestSeller": false,
+    "relatedProducts": [19, 20],
+    "slug": "poly-voyager-free-60-earbuds",
+    "isNew": false,
+    "featured": false,
+    "tags": ["audio", "hp"]
+  },
+  {
+    "id": 19,
+    "shortName": "Airpods Pro 2",
+    "name": "Airpods Pro 2",
+    "connectivity": "Wireless (Bluetooth)",
+    "batteryLife": "24 hours",
+    "color": "white",
+    "brand": "Apple",
+    "category": "audio",
+    "stock": 40,
+    "images": [
+      "/images/audio-airpodsPro-1.jpg",
+      "/images/audio-airpodsPro-2.jpg"
+    ],
+    "price": 249,
+    "currency": "USD",
+    "shortDesc": "Wireless audio with comfort, clear sound, and all-day usability.",
+    "longDesc": "Airpods Pro 2 combines comfort, reliable connectivity, and high-quality audio performance. Whether for music, calls, gaming, or travel, it delivers a balanced listening experience throughout the day.",
+    "rating": {
+      "average": 4.5,
+      "count": 200
+    },
+    "reviews": [
+      {
+        "user": "Sara",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 5,
+        "date": "2025-04-10"
+      },
+      {
+        "user": "Ali",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4,
+        "date": "2025-02-15"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [18, 20],
+    "slug": "airpods-pro-2",
+    "isNew": false,
+    "featured": false,
+    "tags": ["audio", "apple"]
+  },
+  {
+    "id": 20,
+    "shortName": "JBL Tune 230NC TWS",
+    "name": "JBL Tune 230NC TWS - True Wireless Noise Cancelling Earbuds",
+    "connectivity": "Wireless (Bluetooth)",
+    "batteryLife": "40 hours",
+    "color": "black",
+    "brand": "JBL",
+    "category": "audio",
+    "stock": 35,
+    "images": [
+      "/images/audio-JBL-Tune230NC-1.png",
+      "/images/audio-JBL-Tune230NC-2.webp"
+    ],
+    "price": 100,
+    "currency": "USD",
+    "shortDesc": "Wireless audio with comfort, clear sound, and all-day usability.",
+    "longDesc": "JBL Tune 230NC TWS - True Wireless Noise Cancelling Earbuds combines comfort, reliable connectivity, and high-quality audio performance. Whether for music, calls, gaming, or travel, it delivers a balanced listening experience throughout the day.",
+    "rating": {
+      "average": 2.5,
+      "count": 80
+    },
+    "reviews": [
+      {
+        "user": "Neda",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 2,
+        "date": "2025-03-10"
+      },
+      {
+        "user": "Taha",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 3,
+        "date": "2025-01-20"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [19, 20],
+    "slug": "jbl-tune-230nc-tws-true-wireless-noise-cancelling-earbuds",
+    "isNew": false,
+    "featured": true,
+    "tags": ["audio", "jbl"]
+  },
+  {
+    "id": 21,
+    "shortName": "Bose QuietComfort Earbuds II",
+    "name": "Bose QuietComfort Earbuds II",
+    "connectivity": "Wireless (Bluetooth)",
+    "batteryLife": "18 hours",
+    "color": "white",
+    "brand": "Bose",
+    "category": "audio",
+    "stock": 20,
+    "images": [
+      "/images/audio-QuietComfortEarbuds-1.webp",
+      "/images/audio-QuietComfortEarbuds-2.webp"
+    ],
+    "price": 299,
+    "currency": "USD",
+    "shortDesc": "Wireless audio with comfort, clear sound, and all-day usability.",
+    "longDesc": "Bose QuietComfort Earbuds II combines comfort, reliable connectivity, and high-quality audio performance. Whether for music, calls, gaming, or travel, it delivers a balanced listening experience throughout the day.",
+    "rating": {
+      "average": 4.6,
+      "count": 60
+    },
+    "reviews": [
+      {
+        "user": "Laleh",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 5,
+        "date": "2025-02-10"
+      },
+      {
+        "user": "Kaveh",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4.2,
+        "date": "2025-01-25"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [17, 18],
+    "slug": "bose-quietcomfort-earbuds-ii",
+    "isNew": false,
+    "featured": false,
+    "tags": ["audio", "bose"]
+  },
+  {
+    "id": 22,
+    "shortName": "Logitech MX Master 3S Wireless Mouse",
+    "name": "Logitech MX Master 3S Wireless Mouse",
+    "type": "Wireless",
+    "connectivity": "Bluetooth and USB receiver",
+    "color": "black",
+    "brand": "Logitech",
+    "category": "accessory",
+    "stock": 50,
+    "images": [
+      "/images/accessory-logitechMXMaster3S-1.webp",
+      "/images/accessory-logitechMXMaster3S-2.webp",
+      "/images/accessory-logitechMXMaster3S-3.webp"
+    ],
+    "price": 100,
+    "currency": "USD",
+    "shortDesc": "A reliable accessory designed to improve productivity and everyday comfort.",
+    "longDesc": "Logitech MX Master 3S Wireless Mouse is built to provide dependable performance, comfort, and convenience. Its practical design makes it an excellent choice for both professional and everyday use.",
+    "rating": {
+      "average": 4.9,
+      "count": 120
+    },
+    "reviews": [
+      {
+        "user": "Parisa",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 5,
+        "date": "2025-06-10"
+      },
+      {
+        "user": "Omid",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4.8,
+        "date": "2025-04-15"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [23, 24],
+    "slug": "logitech-mx-master-3s-wireless-mouse",
+    "isNew": false,
+    "featured": false,
+    "tags": ["accessory", "logitech"]
+  },
+  {
+    "id": 23,
+    "shortName": "K380 MULTI-DEVICE BLUETOOTH KEYBOARD FOR MAC",
+    "name": "K380 MULTI-DEVICE BLUETOOTH KEYBOARD FOR MAC",
+    "type": "Wireless",
+    "connectivity": "Bluetooth",
+    "color": "black",
+    "brand": "Logitech",
+    "category": "accessory",
+    "stock": 40,
+    "images": [
+      "/images/accessory-K380MULTI-DEVICE-1.webp",
+      "/images/accessory-K380MULTI-DEVICE-2.webp"
+    ],
+    "price": 55,
+    "currency": "USD",
+    "shortDesc": "A reliable accessory designed to improve productivity and everyday comfort.",
+    "longDesc": "K380 MULTI-DEVICE BLUETOOTH KEYBOARD FOR MAC is built to provide dependable performance, comfort, and convenience. Its practical design makes it an excellent choice for both professional and everyday use.",
+    "rating": {
+      "average": 4.7,
+      "count": 80
+    },
+    "reviews": [
+      {
+        "user": "Mina",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4.5,
+        "date": "2025-05-10"
+      },
+      {
+        "user": "Saeed",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4.8,
+        "date": "2025-03-15"
+      }
+    ],
+    "specialOffer": true,
+    "offerHours": 24,
+    "bestSeller": false,
+    "relatedProducts": [22, 24],
+    "slug": "k380-multi-device-bluetooth-keyboard-for-mac",
+    "isNew": false,
+    "featured": false,
+    "tags": ["accessory", "logitech"]
+  },
+  {
+    "id": 24,
+    "shortName": "Dell Pro Silent Wired Collaboration Keyboard",
+    "name": "Dell Pro Silent Wired Collaboration Keyboard - KB525C",
+    "type": "Wired",
+    "connectivity": "USB",
+    "color": "black",
+    "brand": "Dell",
+    "category": "accessory",
+    "stock": 25,
+    "images": [
+      "/images/accessory-DellProSilentWired-1.avif",
+      "/images/accessory-DellProSilentWired-2.avif"
+    ],
+    "price": 35,
+    "currency": "USD",
+    "shortDesc": "A reliable accessory designed to improve productivity and everyday comfort.",
+    "longDesc": "Dell Pro Silent Wired Collaboration Keyboard - KB525C is built to provide dependable performance, comfort, and convenience. Its practical design makes it an excellent choice for both professional and everyday use.",
+    "rating": {
+      "average": 4.4,
+      "count": 50
+    },
+    "reviews": [
+      {
+        "user": "Shirin",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4.3,
+        "date": "2025-03-10"
+      },
+      {
+        "user": "Kian",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4.6,
+        "date": "2025-01-25"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [22, 23],
+    "slug": "dell-pro-silent-wired-collaboration-keyboard-kb525c",
+    "isNew": false,
+    "featured": false,
+    "tags": ["accessory", "dell"]
+  },
+  {
+    "id": 25,
+    "shortName": "HP 125 Wired Mouse",
+    "name": "HP 125 Wired Mouse - With Easy Plug And Play USB Connectivity",
+    "type": "Wired",
+    "connectivity": "USB",
+    "color": "black",
+    "brand": "HP",
+    "category": "accessory",
+    "stock": 45,
+    "images": [
+      "/images/accessory-HP125WiredMouse-1.avif",
+      "/images/accessory-HP125WiredMouse-2.avif"
+    ],
+    "price": 6,
+    "currency": "USD",
+    "shortDesc": "A reliable accessory designed to improve productivity and everyday comfort.",
+    "longDesc": "HP 125 Wired Mouse - With Easy Plug And Play USB Connectivity is built to provide dependable performance, comfort, and convenience. Its practical design makes it an excellent choice for both professional and everyday use.",
+    "rating": {
+      "average": 2.9,
+      "count": 70
+    },
+    "reviews": [
+      {
+        "user": "Roya",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 3,
+        "date": "2025-03-10"
+      },
+      {
+        "user": "Ibrahim",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 2.7,
+        "date": "2025-01-25"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [26, 27],
+    "slug": "hp-125-wired-mouse-with-easy-plug-and-play-usb-connectivity",
+    "isNew": false,
+    "featured": false,
+    "tags": ["accessory", "hp"]
+  },
+  {
+    "id": 26,
+    "shortName": "Dell Pro Premium Compact Mouse",
+    "name": "Dell Pro Premium Compact Mouse - MS7421W",
+    "type": "Wireless",
+    "connectivity": "Bluetooth and USB receiver",
+    "color": "white",
+    "brand": "Dell",
+    "category": "accessory",
+    "stock": 30,
+    "images": [
+      "/images/accessory-DellProPremiumCompact-1.avif",
+      "/images/accessory-DellProPremiumCompact-2.avif"
+    ],
+    "price": 70,
+    "currency": "USD",
+    "shortDesc": "A reliable accessory designed to improve productivity and everyday comfort.",
+    "longDesc": "Dell Pro Premium Compact Mouse - MS7421W is built to provide dependable performance, comfort, and convenience. Its practical design makes it an excellent choice for both professional and everyday use.",
+    "rating": {
+      "average": 3.2,
+      "count": 60
+    },
+    "reviews": [
+      {
+        "user": "Zahra",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4.6,
+        "date": "2025-05-10"
+      },
+      {
+        "user": "Simin",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 3,
+        "date": "2025-03-15"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": false,
+    "relatedProducts": [25, 27],
+    "slug": "dell-pro-premium-compact-mouse-ms7421w",
+    "isNew": false,
+    "featured": false,
+    "tags": ["accessory", "dell"]
+  },
+  {
+    "id": 27,
+    "shortName": "Alienware Tri-Mode Wireless Gaming Keyboard",
+    "name": "Alienware Tri-Mode Wireless Gaming Keyboard - AW920K",
+    "type": "Wireless",
+    "connectivity": "Bluetooth and USB receiver",
+    "color": "black",
+    "brand": "Dell",
+    "category": "accessory",
+    "stock": 20,
+    "images": [
+      "/images/accessory-AlienwareTri-ModeWireless-2.avif",
+      "/images/accessory-AlienwareTri-ModeWireless-1.avif"
+    ],
+    "price": 200,
+    "currency": "USD",
+    "shortDesc": "A reliable accessory designed to improve productivity and everyday comfort.",
+    "longDesc": "Alienware Tri-Mode Wireless Gaming Keyboard - AW920K is built to provide dependable performance, comfort, and convenience. Its practical design makes it an excellent choice for both professional and everyday use.",
+    "rating": {
+      "average": 4.3,
+      "count": 40
+    },
+    "reviews": [
+      {
+        "user": "Ehsan",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4,
+        "date": "2025-04-10"
+      },
+      {
+        "user": "Negina",
+        "comment": "Great product with solid performance and good value for the price.",
+        "rating": 4.5,
+        "date": "2025-02-15"
+      }
+    ],
+    "specialOffer": false,
+    "bestSeller": true,
+    "relatedProducts": [25, 26],
+    "slug": "alienware-tri-mode-wireless-gaming-keyboard-aw920k",
+    "isNew": false,
+    "featured": false,
+    "tags": ["accessory", "dell"]
+  }
+]

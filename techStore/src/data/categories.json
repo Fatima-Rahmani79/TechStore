@@ -1,0 +1,20 @@
+[
+  {
+    "id": "laptop",
+    "name": "Laptops",
+    "icon": "Laptop"
+  },
+  {
+    "id": "monitor",
+    "name": "Monitors",
+    "icon": "Monitor"
+  },
+  {
+    "id": "audio",
+    "name": "Audio"
+  },
+  {
+    "id": "accessory",
+    "name": "Accessories"
+  }
+]
