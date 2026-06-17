@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getProducts } from "../services/productsApi";
 import EmptyState from "../components/ui/EmptyState.jsx";
-import { Star } from "lucide-react";
+import { ArrowLeft, Star } from "lucide-react";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -66,6 +66,13 @@ export default function ProductDetails() {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12">
+      <Link to="/shop">
+        <button className="btn-primary mb-6">
+          <ArrowLeft />
+          Back to Shop
+        </button>
+      </Link>
+
       <div className="grid gap-12 lg:grid-cols-2">
         {/* Images */}
         <div>
@@ -182,7 +189,6 @@ export default function ProductDetails() {
         </div>
       </div>
 
-      {/* Reviews */}
       <section className="mt-16">
         <h2 className="mb-6 text-2xl font-bold">Customer Reviews</h2>
 
