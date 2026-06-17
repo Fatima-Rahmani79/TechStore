@@ -1,7 +1,10 @@
 import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { addToCart } from "../../../features/cart/cartSlice";
+import { useDispatch } from "react-redux";
 
 export default function ProductCard({ product }) {
+  const dispatch = useDispatch();
   return (
     <Link to={`/products/${product.id}`}>
       <article className="group overflow-hidden rounded-3xl border border-neutral-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent)]">
@@ -33,7 +36,12 @@ export default function ProductCard({ product }) {
               <Heart size={18} />
             </button>
           </div>
-          <button className="btn-primary w-full">Add to Cart</button>
+          <button
+            className="btn-primary w-full"
+            onClick={() => dispatch(addToCart(product))}
+          >
+            Add to Cart
+          </button>
         </div>
       </article>
     </Link>
