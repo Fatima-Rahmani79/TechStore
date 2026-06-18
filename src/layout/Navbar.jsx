@@ -41,15 +41,15 @@ export default function Navbar() {
               <Heart />
             </button>
             <Link to="/cart">
-              <button className="btn-icon">
+              <div className="relative">
                 <ShoppingCart className="h-6 w-6" />
 
                 {totalItems > 0 && (
-                  <span className="absoloute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">
-                    {totalItems}
+                  <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">
+                    {totalItems > 99 ? "99+" : totalItems}
                   </span>
                 )}
-              </button>
+              </div>
             </Link>
           </div>
         </nav>
