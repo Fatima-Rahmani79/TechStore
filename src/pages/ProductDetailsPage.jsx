@@ -3,9 +3,13 @@ import { Link, useParams } from "react-router-dom";
 import { getProducts } from "../services/productsApi";
 import EmptyState from "../components/ui/EmptyState.jsx";
 import { ArrowLeft, Star } from "lucide-react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../features/cart/cartSlice.js";
 
 export default function ProductDetails() {
   const { id } = useParams();
+
+  const dispatch = useDispatch();
 
   const [product, setProduct] = useState(null);
 
@@ -163,10 +167,14 @@ export default function ProductDetails() {
             hover:opacity-90
             cursor-pointer
           "
+            onClick={(e) => {
+              e.preventDefault();
+              console.log(product);
+              dispatch(addToCart(product));
+            }}
           >
             Add to Cart
           </button>
-
           {/* Specifications */}
           <div className="overflow-hidden rounded-3xl border border-neutral-200">
             <h2 className="border-b border-neutral-200 p-4 text-lg font-semibold">
