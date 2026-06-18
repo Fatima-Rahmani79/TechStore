@@ -27,9 +27,7 @@ export default function CartSummary() {
           </div>
         </div>
 
-        <button className="mt-4 w-full rounded-xl bg-black py-3 font-medium text-white transition hover:bg-neutral-800">
-          Checkout
-        </button>
+        <button className="btn-primary w-full">Checkout</button>
       </div>
     </div>
   );
