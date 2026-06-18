@@ -88,7 +88,7 @@ export default function ProductDetails() {
             />
           </div>
 
-          <div className="mt-4 flex gap-3 overflow-x-auto">
+          <div className="mt-12 flex gap-3 overflow-x-auto">
             {product.images.map((image) => (
               <button
                 key={image}
@@ -99,11 +99,7 @@ export default function ProductDetails() {
                     : "border-transparent"
                 }`}
               >
-                <img
-                  src={image}
-                  alt={product.name}
-                  className="h-20 w-20 object-cover"
-                />
+                <img src={image} alt={product.name} className="h-24 w-24" />
               </button>
             ))}
           </div>
