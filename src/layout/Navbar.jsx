@@ -37,10 +37,12 @@ export default function Navbar() {
             <button className="btn-icon" onClick={() => setIsSearchOpen(true)}>
               <Search />
             </button>
+
             <button className="btn-icon">
               <Heart />
             </button>
-            <Link to="/cart">
+
+            <Link to="/cart" className="btn-icon">
               <div className="relative">
                 <ShoppingCart className="h-6 w-6" />
 
