@@ -36,9 +36,11 @@ export default function Navbar() {
             <button className="btn-icon">
               <Heart />
             </button>
-            <button className="btn-icon">
-              <ShoppingCart />
-            </button>
+            <Link to="/cart">
+              <button className="btn-icon">
+                <ShoppingCart />
+              </button>
+            </Link>
           </div>
         </nav>
       </header>

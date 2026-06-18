@@ -38,7 +38,11 @@ export default function ProductCard({ product }) {
           </div>
           <button
             className="btn-primary w-full"
-            onClick={() => dispatch(addToCart(product))}
+            onClick={(e) => {
+              e.preventDefault();
+              console.log(product);
+              dispatch(addToCart(product));
+            }}
           >
             Add to Cart
           </button>
