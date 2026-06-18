@@ -3,14 +3,34 @@ import { selectCartTotalItems, selectCartTotalPrice } from "../cartSelectors";
 
 export default function CartSummary() {
   const totalItems = useSelector(selectCartTotalItems);
-
   const totalPrice = useSelector(selectCartTotalPrice);
 
   return (
-    <div className="rounded-xl border p-4">
-      <h2>Order Summary</h2>
-      <p>Total Quantity: {totalItems}</p>
-      <p>Total Price: {totalPrice.toFixed(2)}</p>
+    <div className="sticky top-24 h-fit rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+      <h2 className="mb-6 text-2xl font-bold">Order Summary</h2>
+
+      <div className="space-y-4">
+        <div className="flex justify-between text-neutral-600">
+          <span>Items</span>
+          <span>{totalItems}</span>
+        </div>
+
+        <div className="flex justify-between text-neutral-600">
+          <span>Subtotal</span>
+          <span>${totalPrice.toFixed(2)}</span>
+        </div>
+
+        <div className="border-t pt-4">
+          <div className="flex justify-between text-lg font-bold">
+            <span>Total</span>
+            <span>${totalPrice.toFixed(2)}</span>
+          </div>
+        </div>
+
+        <button className="mt-4 w-full rounded-xl bg-black py-3 font-medium text-white transition hover:bg-neutral-800">
+          Checkout
+        </button>
+      </div>
     </div>
   );
 }
