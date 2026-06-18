@@ -3,9 +3,13 @@ import { Search, Heart, ShoppingCart } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import SearchModal from "../components/sections/SearchModal";
 import { useState } from "react";
+import { selectCartTotalItems } from "../features/cart/cartSelectors";
+import { useSelector } from "react-redux";
 
 export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  const totalItems = useSelector(selectCartTotalItems);
 
   return (
     <>
@@ -38,7 +42,13 @@ export default function Navbar() {
             </button>
             <Link to="/cart">
               <button className="btn-icon">
-                <ShoppingCart />
+                <ShoppingCart className="h-6 w-6" />
+
+                {totalItems > 0 && (
+                  <span className="absoloute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">
+                    {totalItems}
+                  </span>
+                )}
               </button>
             </Link>
           </div>

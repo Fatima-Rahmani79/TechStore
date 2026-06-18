@@ -7,9 +7,10 @@ export default function CartSummary() {
   const totalPrice = useSelector(selectCartTotalPrice);
 
   return (
-    <div>
+    <div className="rounded-xl border p-4">
+      <h2>Order Summary</h2>
       <p>Total Quantity: {totalItems}</p>
-      <p>Total Price: {totalPrice}</p>
+      <p>Total Price: {totalPrice.toFixed(2)}</p>
     </div>
   );
 }
