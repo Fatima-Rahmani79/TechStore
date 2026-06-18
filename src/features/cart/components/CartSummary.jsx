@@ -1,3 +1,3 @@
-export default function CartSummary({ items }) {
+export default function CartSummary() {
   return <p>Cart Summary</p>;
 }
