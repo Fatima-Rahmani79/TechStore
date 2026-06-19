@@ -5,11 +5,14 @@ import SearchModal from "../components/sections/SearchModal";
 import { useState } from "react";
 import { selectCartTotalItems } from "../features/cart/cartSelectors";
 import { useSelector } from "react-redux";
+import { selectWishlistTotalItems } from "../features/wishlist/components/wishlistSelectors";
 
 export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const totalItems = useSelector(selectCartTotalItems);
+
+  const wishlistCount = useSelector(selectWishlistTotalItems);
 
   return (
     <>
@@ -38,9 +41,17 @@ export default function Navbar() {
               <Search />
             </button>
 
-            <button className="btn-icon">
-              <Heart />
-            </button>
+            <Link to="/whishlist" className="btn-icon">
+              <div className="relative">
+                <Heart className="h-6 w-6" />
+
+                {wishlistCount > 0 && (
+                  <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">
+                    {wishlistCount > 99 ? "99+" : wishlistCount}
+                  </span>
+                )}
+              </div>
+            </Link>
 
             <Link to="/cart" className="btn-icon">
               <div className="relative">
