@@ -2,6 +2,7 @@ import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { addToCart } from "../../../features/cart/cartSlice";
 import { useDispatch } from "react-redux";
+import { addToWishlist } from "../../wishlist/wishlistSlice";
 
 export default function ProductCard({ product }) {
   const dispatch = useDispatch();
@@ -29,13 +30,21 @@ export default function ProductCard({ product }) {
             {product.shortDesc}
           </p>
           <div className="mt-auto">
-            <div className="flex items-center justify-between pt-2">
+            <div className="flex items-center justify-between pt-2  mb-4">
               <span className="text-xl font-bold">${product.price}</span>
 
-              <button className="rounded-full border border-neutral-200 p-2 transition hover:bg-neutral-100">
+              <button
+                className="rounded-full border border-neutral-200 p-2 transition hover:bg-neutral-100"
+                onClick={(e) => {
+                  e.preventDefault();
+                  console.log(product);
+                  dispatch(addToWishlist(product));
+                }}
+              >
                 <Heart size={18} />
               </button>
             </div>
+
             <button
               className="btn-primary w-full"
               onClick={(e) => {

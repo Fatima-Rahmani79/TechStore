@@ -5,7 +5,7 @@ import SearchModal from "../components/sections/SearchModal";
 import { useState } from "react";
 import { selectCartTotalItems } from "../features/cart/cartSelectors";
 import { useSelector } from "react-redux";
-import { selectWishlistTotalItems } from "../features/wishlist/components/wishlistSelectors";
+import { selectWishlistTotalItems } from "../features/wishlist/wishlistSelectors";
 
 export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -47,7 +47,7 @@ export default function Navbar() {
 
                 {wishlistCount > 0 && (
                   <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">
-                    {wishlistCount > 99 ? "99+" : wishlistCount}
+                    {wishlistCount}
                   </span>
                 )}
               </div>
