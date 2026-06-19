@@ -1,4 +1,3 @@
-export const selectWishlistItems = (state) => state.cart.items;
+export const selectWishlistItems = (state) => state.wishlist.items;
 
-export const selectWishlistTotalItems = (state) =>
-  state.cart.items.reduce((sum, item) => sum + item.quantity, 0);
+export const selectWishlistTotalItems = (state) => state.wishlist.items.length;
