@@ -1,13 +1,20 @@
+import { useSelector } from "react-redux";
+import { selectWishlistItems } from "../features/wishlist/wishlistSelectors";
+
 export default function WishlistItem({ item }) {
+  const items = useSelector(selectWishlistItems);
+
+  if (items.length === 0) {
+    return <p>Your wishlist is emoty.</p>;
+  }
   return (
     <div>
-      <img src={item.images[0]} alt={item.name} />
-
-      <h3>{item.name}</h3>
-
-      <p>{item.price}</p>
-
-      <button>Remove</button>
+      items.map((item) => (
+  <WishlistItem
+    key={item.id}
+    item={item}
+  />
+))
     </div>
   );
 }
