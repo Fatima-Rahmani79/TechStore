@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { removeFromWishlist } from "../wishlistSlice";
+import { addToCart } from "../../cart/cartSlice";
 
 export default function WishlistItem({ item }) {
   const dispatch = useDispatch();
@@ -13,6 +14,15 @@ export default function WishlistItem({ item }) {
 
       <button onClick={() => dispatch(removeFromWishlist(item.id))}>
         Remove
+      </button>
+
+      <button
+        onClick={() => {
+          dispatch(addToCart(item));
+          dispatch(removeFromWishlist(item.id));
+        }}
+      >
+        Move To Cart
       </button>
     </div>
   );

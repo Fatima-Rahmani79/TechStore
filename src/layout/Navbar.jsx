@@ -41,7 +41,7 @@ export default function Navbar() {
               <Search />
             </button>
 
-            <Link to="/whishlist" className="btn-icon">
+            <Link to="/wishlist" className="btn-icon">
               <div className="relative">
                 <Heart className="h-6 w-6" />
 

@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 import { selectWishlistItems } from "../features/wishlist/wishlistSelectors";
+import WishlistItem from "../features/wishlist/components/WishlistItem";
 
-export default function WishlistItem({ item }) {
+export default function WishlistPage() {
   const items = useSelector(selectWishlistItems);
 
   if (items.length === 0) {
@@ -9,12 +10,9 @@ export default function WishlistItem({ item }) {
   }
   return (
     <div>
-      items.map((item) => (
-  <WishlistItem
-    key={item.id}
-    item={item}
-  />
-))
+      {items.map((item) => (
+        <WishlistItem key={item.id} item={item} />
+      ))}
     </div>
   );
 }
