@@ -1,4 +1,8 @@
+import { useDispatch } from "react-redux";
+import { removeFromWishlist } from "../wishlistSlice";
+
 export default function WishlistItem({ item }) {
+  const dispatch = useDispatch();
   return (
     <div>
       <img src={item.images[0]} alt={item.name} />
@@ -7,7 +11,9 @@ export default function WishlistItem({ item }) {
 
       <p>${item.price}</p>
 
-      <button>Remove</button>
+      <button onClick={() => dispatch(removeFromWishlist(item.id))}>
+        Remove
+      </button>
     </div>
   );
 }
