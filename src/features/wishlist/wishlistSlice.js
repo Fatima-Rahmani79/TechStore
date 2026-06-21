@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { loadWishlist } from "./wishlistStorage";
 
 const initialState = {
-  items: [],
+  items: loadWishlist(),
 };
 
 const wishlistSlice = createSlice({
