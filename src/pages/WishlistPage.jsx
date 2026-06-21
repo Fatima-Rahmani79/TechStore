@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
-import { Heart } from "lucide-react";
+import { ArrowLeft, Heart } from "lucide-react";
 import { selectWishlistItems } from "../features/wishlist/wishlistSelectors";
 import WishlistItem from "../features/wishlist/components/WishlistItem";
 import EmptyState from "../components/ui/EmptyState";
+import { Link } from "react-router-dom";
 
 export default function WishlistPage() {
   const items = useSelector(selectWishlistItems);
@@ -21,6 +22,12 @@ export default function WishlistPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-12">
+      <Link to="/shop">
+        <button className="btn-secondary mb-6">
+          <ArrowLeft />
+          Back to Shop
+        </button>
+      </Link>
       <div className="mb-8">
         <h1 className="text-4xl font-bold">Wishlist</h1>
 

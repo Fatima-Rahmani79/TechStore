@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import CartItem from "../features/cart/components/CartItem";
 import CartSummary from "../features/cart/components/CartSummary";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 export default function CartPage() {
   const items = useSelector((state) => state.cart.items);
@@ -20,6 +22,12 @@ export default function CartPage() {
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-12">
+      <Link to="/shop">
+        <button className="btn-secondary mb-6">
+          <ArrowLeft />
+          Back to Shop
+        </button>
+      </Link>
       <h1 className="mb-8 text-4xl font-bold">Shopping Cart</h1>
 
       <div className="grid gap-8 lg:grid-cols-[2fr_1fr]">

@@ -71,7 +71,7 @@ export default function ProductDetails() {
   return (
     <div className="mx-auto max-w-7xl px-6 py-12">
       <Link to="/shop">
-        <button className="btn-primary mb-6">
+        <button className="btn-secondary mb-6">
           <ArrowLeft />
           Back to Shop
         </button>
