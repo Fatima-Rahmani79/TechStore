@@ -45,16 +45,21 @@ export default function ProductCard({ product }) {
               </button>
             </div>
 
-            <button
-              className="btn-primary w-full"
-              onClick={(e) => {
-                e.preventDefault();
-                console.log(product);
-                dispatch(addToCart(product));
-              }}
-            >
-              Add to Cart
-            </button>
+            <div className="flex justify-between">
+              <button
+                className="btn-primary"
+                onClick={(e) => {
+                  e.preventDefault();
+                  console.log(product);
+                  dispatch(addToCart(product));
+                }}
+              >
+                Add to Cart
+              </button>
+              <button className="btn-secondary">
+                <Link to={`/products/${product.id}`}>View Details</Link>
+              </button>
+            </div>
           </div>
         </div>
       </article>

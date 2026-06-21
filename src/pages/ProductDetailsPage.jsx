@@ -150,19 +150,7 @@ export default function ProductDetails() {
           <p className="mt-6 leading-7 text-neutral-600">{product.longDesc}</p>
 
           <button
-            className="
-            my-8
-            w-full
-            rounded-2xl
-            bg-[var(--accent)]
-            px-6
-            py-4
-            font-semibold
-            text-black
-            transition
-            hover:opacity-90
-            cursor-pointer
-          "
+            className="btn-primary my-8 py-4 w-full"
             onClick={(e) => {
               e.preventDefault();
               console.log(product);

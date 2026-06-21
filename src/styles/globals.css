@@ -20,7 +20,7 @@
 
   /* Accent */
   --accent: #fedb02;
-  --accent-hover: #ffe14a;
+  --accent-hover: #ffe358;
   --accent-text: #1c1b1a; /* روی accent همیشه dark */
 
   /* Shadows */
@@ -88,7 +88,6 @@
     color: var(--text-primary);
   }
 
-  /* Price tags و اعداد مهم */
   .font-price {
     font-family: "JetBrains Mono", monospace;
     font-weight: 500;
