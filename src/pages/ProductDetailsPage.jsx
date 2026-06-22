@@ -5,7 +5,7 @@ import EmptyState from "../components/ui/EmptyState.jsx";
 import { ArrowLeft, Star } from "lucide-react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/cart/cartSlice.js";
-import ProductCard from "../components/product/ProductCard";
+import ProductCard from "../features/products/components/ProductCard.jsx";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -208,6 +208,16 @@ export default function ProductDetails() {
               <p className="mt-3 text-neutral-600">{review.comment}</p>
             </div>
           ))}
+
+          <section className="mt-16">
+            <h2 className="mb-6 text-2xl font-bold">Related Products</h2>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedProducts.map((item) => (
+                <ProductCard key={item.id} product={item} />
+              ))}
+            </div>
+          </section>
         </div>
       </section>
     </div>
