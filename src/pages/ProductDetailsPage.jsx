@@ -203,9 +203,16 @@ export default function ProductDetails() {
             >
               <div className="flex items-start justify-between">
                 <div>
-                  <h3 className="font-semibold text-lg">{review.user}</h3>
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-200 font-semibold">
+                      {review.user.charAt(0)}
+                    </div>
 
-                  <p className="text-sm text-neutral-500">{review.date}</p>
+                    <div>
+                      <h3 className="font-semibold">{review.user}</h3>
+                      <p className="text-sm text-neutral-500">{review.date}</p>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="flex items-center gap-1">
