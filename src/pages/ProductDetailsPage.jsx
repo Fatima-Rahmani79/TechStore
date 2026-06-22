@@ -5,6 +5,7 @@ import EmptyState from "../components/ui/EmptyState.jsx";
 import { ArrowLeft, Star } from "lucide-react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/cart/cartSlice.js";
+import ProductCard from "../components/product/ProductCard";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -71,6 +72,10 @@ export default function ProductDetails() {
       />
     );
   }
+
+  const relatedProducts = products.filter((item) =>
+    product.relatedProducts?.includes(item.id),
+  );
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12">
