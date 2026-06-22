@@ -49,7 +49,7 @@ export default function ProductDetails() {
 
       setProducts(productsData);
 
-      const foundProduct = products.find(
+      const foundProduct = productsData.find(
         (product) => product.id === Number(id),
       );
 
