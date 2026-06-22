@@ -11,6 +11,8 @@ export default function ProductDetails() {
 
   const dispatch = useDispatch();
 
+  const [products, setProducts] = useState([]);
+
   const [product, setProduct] = useState(null);
 
   const [selectedImage, setSelectedImage] = useState("");
