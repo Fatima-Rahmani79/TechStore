@@ -45,7 +45,9 @@ export default function ProductDetails() {
 
   useEffect(() => {
     async function loadProduct() {
-      const products = await getProducts();
+      const productsData = await getProducts();
+
+      setProducts(productsData);
 
       const foundProduct = products.find(
         (product) => product.id === Number(id),
