@@ -191,33 +191,49 @@ export default function ProductDetails() {
       </div>
 
       <section className="mt-16">
-        <h2 className="mb-6 text-2xl font-bold">Customer Reviews</h2>
+        <h2 className="mb-6 text-2xl font-bold">
+          Customer Reviews ({product.rating.count})
+        </h2>
 
-        <div className="space-y-4">
+        <div className="space-y-5">
           {product.reviews.map((review, index) => (
             <div
               key={`${review.user}-${index}`}
-              className="rounded-3xl border border-neutral-200 p-5"
+              className="rounded-3xl border border-neutral-200 bg-white p-6"
             >
-              <div className="flex items-center justify-between">
-                <h3 className="font-semibold">{review.user}</h3>
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="font-semibold text-lg">{review.user}</h3>
 
-                <span className="text-sm text-neutral-500">{review.date}</span>
+                  <p className="text-sm text-neutral-500">{review.date}</p>
+                </div>
+
+                <div className="flex items-center gap-1">
+                  <Star
+                    size={16}
+                    fill="currentColor"
+                    className="text-yellow-500"
+                  />
+
+                  <span className="font-medium">{review.rating}</span>
+                </div>
               </div>
 
-              <p className="mt-3 text-neutral-600">{review.comment}</p>
+              <p className="mt-4 leading-7 text-neutral-600">
+                {review.comment}
+              </p>
             </div>
           ))}
+        </div>
+      </section>
 
-          <section className="mt-16">
-            <h2 className="mb-6 text-2xl font-bold">Related Products</h2>
+      <section className="mt-16">
+        <h2 className="mb-6 text-2xl font-bold">Related Products</h2>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {relatedProducts.map((item) => (
-                <ProductCard key={item.id} product={item} />
-              ))}
-            </div>
-          </section>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {relatedProducts.map((item) => (
+            <ProductCard key={item.id} product={item} />
+          ))}
         </div>
       </section>
     </div>
