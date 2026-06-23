@@ -1,11 +1,16 @@
 import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { addToCart } from "../../../features/cart/cartSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToWishlist } from "../../wishlist/wishlistSlice";
+import { selectWishlistItems } from "../../wishlist/wishlistSelectors";
 
 export default function ProductCard({ product }) {
   const dispatch = useDispatch();
+  const wishlistItems = useSelector(selectWishlistItems);
+
+  const isWishlist = wishlistItems.some((item) => item.id === product.id);
+
   return (
     <Link to={`/products/${product.id}`}>
       <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-neutral-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent)]">
@@ -41,7 +46,15 @@ export default function ProductCard({ product }) {
                   dispatch(addToWishlist(product));
                 }}
               >
-                <Heart size={18} />
+                {isWishlist ? (
+                  <Heart
+                    size={18}
+                    className="h-6 w-6 text-red-500"
+                    fill="currentColor"
+                  />
+                ) : (
+                  <Heart size={18} className="h-6 w-6" />
+                )}
               </button>
             </div>
 
