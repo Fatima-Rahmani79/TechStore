@@ -15,23 +15,31 @@ export default function WishlistPage() {
           icon={<Heart size={32} />}
           title="Your wishlist is empty"
           description="Save products you love and come back to them later."
-        />
+        >
+          <Link to="/shop" className="btn-primary">
+            Browse Products
+          </Link>
+        </EmptyState>
       </div>
     );
   }
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-12">
-      <Link to="/shop">
-        <button className="btn-secondary mb-6">
-          <ArrowLeft />
-          Back to Shop
-        </button>
+      {/* ✓ Link نه button داخل Link */}
+      <Link
+        to="/shop"
+        className="btn-secondary mb-8 inline-flex items-center gap-2"
+      >
+        <ArrowLeft size={16} />
+        Back to Shop
       </Link>
-      <div className="mb-8">
-        <h1 className="text-4xl font-bold">Wishlist</h1>
 
-        <p className="mt-2 text-neutral-500">
+      <div className="mb-8">
+        <h1 className="text-4xl font-bold text-[var(--text-primary)]">
+          Wishlist
+        </h1>
+        <p className="mt-2 text-sm text-[var(--text-secondary)]">
           {items.length} saved product{items.length > 1 ? "s" : ""}
         </p>
       </div>
