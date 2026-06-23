@@ -67,7 +67,7 @@ export default function Navbar() {
               onClick={() => setIsSearchOpen(true)}
               aria-label="Search"
             >
-              <Search className="h-5 w-5" />
+              <Search className="h-6 w-6" />
             </button>
 
             {/* Wishlist */}
@@ -76,7 +76,7 @@ export default function Navbar() {
               className="btn-icon relative"
               aria-label={`Wishlist (${wishlistCount})`}
             >
-              <Heart className="h-5 w-5" />
+              <Heart className="h-6 w-6" />
               {wishlistCount > 0 && <Badge count={wishlistCount} />}
             </Link>
 
@@ -86,7 +86,7 @@ export default function Navbar() {
               className="btn-icon relative"
               aria-label={`Cart (${totalItems})`}
             >
-              <ShoppingCart className="h-5 w-5" />
+              <ShoppingCart className="h-6 w-6" />
               {totalItems > 0 && <Badge count={totalItems} />}
             </Link>
 
@@ -179,7 +179,7 @@ export default function Navbar() {
 
 function Badge({ count }) {
   return (
-    <span className="absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-[var(--accent)] text-[10px] font-bold text-[var(--accent-text)]">
+    <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-[var(--accent)] text-[10px] font-bold text-[var(--accent-text)]">
       {count > 99 ? "99+" : count}
     </span>
   );
