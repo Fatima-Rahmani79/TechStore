@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { selectCartTotalItems } from "../features/cart/cartSelectors";
 import { useSelector } from "react-redux";
 import { selectWishlistTotalItems } from "../features/wishlist/wishlistSelectors";
+import { useDarkMode } from "../hooks/useDarkMode";
+import { Sun, Moon } from "lucide-react";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -16,6 +18,7 @@ const navLinks = [
 export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const { isDark, toggle } = useDarkMode();
 
   const totalItems = useSelector(selectCartTotalItems);
   const wishlistCount = useSelector(selectWishlistTotalItems);
@@ -102,6 +105,14 @@ export default function Navbar() {
               ) : (
                 <Menu className="h-5 w-5" />
               )}
+            </button>
+
+            <button
+              onClick={toggle}
+              className="btn-icon"
+              aria-label="Toggle dark mode"
+            >
+              {isDark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
           </div>
         </nav>

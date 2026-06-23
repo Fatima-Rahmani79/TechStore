@@ -1,7 +1,8 @@
 import AppRoutes from "./routes/AppRoutes";
 
-function App() {
+import { useDarkMode } from "./hooks/useDarkMode";
+
+export default function App() {
+  useDarkMode(); // ← فقط همین کافیه، بقیه hook کارش رو می‌کنه
   return <AppRoutes />;
 }
-
-export default App;

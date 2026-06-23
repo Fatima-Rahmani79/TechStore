@@ -1,19 +1,33 @@
-const productLinks = ["Laptops", "Monitors", "Audio", "Accessories"];
+import { Link } from "react-router-dom";
 
-const companyLinks = ["About", "Contact"];
+const productLinks = [
+  { label: "Laptops", to: "/shop?category=laptop" },
+  { label: "Monitors", to: "/shop?category=monitor" },
+  { label: "Audio", to: "/shop?category=audio" },
+  { label: "Accessories", to: "/shop?category=accessory" },
+];
 
-const socialLinks = ["GitHub", "LinkedIn"];
+const companyLinks = [
+  { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
+];
+
+const socialLinks = [
+  { label: "GitHub", href: "https://github.com" },
+  { label: "LinkedIn", href: "https://linkedin.com" },
+];
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-white/80 border-neutral-200">
+    <footer className="border-t border-[var(--border)] bg-[var(--bg-surface)]">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-24 md:grid-cols-2 lg:grid-cols-4 ">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <h2 className="text-2xl font-bold">TechStore</h2>
-
-            <p className="mt-4 max-w-xs textsm leading-6 text-neutral-600 text-[1.1rem] mr-2">
+            <h2 className="text-xl font-bold text-[var(--text-primary)]">
+              TechStore.
+            </h2>
+            <p className="mt-4 max-w-xs text-sm leading-6 text-[var(--text-secondary)]">
               Modern technology products for work, entertainment, and everyday
               life.
             </p>
@@ -21,17 +35,18 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="mb-4 font-semibold">Products</h3>
-
+            <h3 className="mb-4 text-sm font-semibold text-[var(--text-primary)]">
+              Products
+            </h3>
             <ul className="space-y-3">
-              {productLinks.map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="text-neutral-600 transition hover:text-black"
+              {productLinks.map(({ label, to }) => (
+                <li key={label}>
+                  <Link
+                    to={to}
+                    className="text-sm text-[var(--text-secondary)] transition hover:text-[var(--text-primary)]"
                   >
-                    {item}
-                  </a>
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -39,17 +54,18 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="mb-4 font-semibold">Company</h3>
-
+            <h3 className="mb-4 text-sm font-semibold text-[var(--text-primary)]">
+              Company
+            </h3>
             <ul className="space-y-3">
-              {companyLinks.map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="text-neutral-600 transition hover:text-black"
+              {companyLinks.map(({ label, to }) => (
+                <li key={label}>
+                  <Link
+                    to={to}
+                    className="text-sm text-[var(--text-secondary)] transition hover:text-[var(--text-primary)]"
                   >
-                    {item}
-                  </a>
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -57,16 +73,19 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="mb-4 font-semibold">Social</h3>
-
+            <h3 className="mb-4 text-sm font-semibold text-[var(--text-primary)]">
+              Connect
+            </h3>
             <ul className="space-y-3">
-              {socialLinks.map((item) => (
-                <li key={item}>
+              {socialLinks.map(({ label, href }) => (
+                <li key={label}>
                   <a
-                    href="#"
-                    className="text-neutral-600 transition hover:text-black"
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-[var(--text-secondary)] transition hover:text-[var(--text-primary)]"
                   >
-                    {item}
+                    {label} ↗
                   </a>
                 </li>
               ))}
@@ -74,9 +93,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-neutral-200 pt-6">
-          <p className="text-sm text-neutral-500">
+        {/* Bottom */}
+        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-[var(--border)] pt-6 sm:flex-row sm:items-center">
+          <p className="text-xs text-[var(--text-secondary)]">
             © 2026 TechStore. All rights reserved.
+          </p>
+          <p className="text-xs text-[var(--text-secondary)]">
+            Built with React & Tailwind
           </p>
         </div>
       </div>
