@@ -2,7 +2,10 @@ import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { addToCart } from "../../../features/cart/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { addToWishlist } from "../../wishlist/wishlistSlice";
+import {
+  addToWishlist,
+  removeFromWishlist,
+} from "../../wishlist/wishlistSlice";
 import { selectWishlistItems } from "../../wishlist/wishlistSelectors";
 
 export default function ProductCard({ product }) {
@@ -42,8 +45,12 @@ export default function ProductCard({ product }) {
                 className="rounded-full border border-neutral-200 p-2 transition hover:bg-neutral-100"
                 onClick={(e) => {
                   e.preventDefault();
-                  console.log(product);
-                  dispatch(addToWishlist(product));
+
+                  if (isWishlist) {
+                    dispatch(removeFromWishlist(product.id));
+                  } else {
+                    dispatch(addToWishlist(product));
+                  }
                 }}
               >
                 {isWishlist ? (
