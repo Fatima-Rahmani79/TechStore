@@ -2,19 +2,28 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getProducts } from "../services/productsApi";
 import EmptyState from "../components/ui/EmptyState.jsx";
-import { ArrowLeft, Star } from "lucide-react";
-import { useDispatch } from "react-redux";
+import { ArrowLeft, Heart, Star } from "lucide-react";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../features/cart/cartSlice.js";
 import ProductCard from "../features/products/components/ProductCard.jsx";
+import { selectWishlistItems } from "../features/wishlist/wishlistSelectors.js";
+import {
+  addToWishlist,
+  removeFromWishlist,
+} from "../features/wishlist/wishlistSlice.js";
 
 export default function ProductDetails() {
+  const [products, setProducts] = useState([]);
+
+  const [product, setProduct] = useState(null);
+
   const { id } = useParams();
 
   const dispatch = useDispatch();
 
-  const [products, setProducts] = useState([]);
+  const wishlistItems = useSelector(selectWishlistItems);
 
-  const [product, setProduct] = useState(null);
+  const isWishlist = wishlistItems.some((item) => item.id === product?.id);
 
   const [selectedImage, setSelectedImage] = useState("");
 
@@ -158,16 +167,42 @@ export default function ProductDetails() {
 
           <p className="mt-6 leading-7 text-neutral-600">{product.longDesc}</p>
 
-          <button
-            className="btn-primary my-8 py-4 w-full"
-            onClick={(e) => {
-              e.preventDefault();
-              console.log(product);
-              dispatch(addToCart(product));
-            }}
-          >
-            Add to Cart
-          </button>
+          <div className="my-8 flex gap-4 items-center">
+            <button
+              className="btn-primary my-8 py-4 w-full"
+              onClick={(e) => {
+                e.preventDefault();
+                console.log(product);
+                dispatch(addToCart(product));
+              }}
+            >
+              Add to Cart
+            </button>
+
+            <button
+              className="btn-secondary my-8 py-4"
+              onClick={(e) => {
+                e.preventDefault();
+
+                if (isWishlist) {
+                  dispatch(removeFromWishlist(product.id));
+                } else {
+                  dispatch(addToWishlist(product));
+                }
+              }}
+            >
+              {isWishlist ? (
+                <Heart
+                  size={18}
+                  className="h-6 w-6 text-red-500"
+                  fill="currentColor"
+                />
+              ) : (
+                <Heart size={18} className="h-6 w-6" />
+              )}
+            </button>
+          </div>
+
           {/* Specifications */}
           <div className="overflow-hidden rounded-3xl border border-neutral-200">
             <h2 className="border-b border-neutral-200 p-4 text-lg font-semibold">

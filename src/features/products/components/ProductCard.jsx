@@ -10,6 +10,7 @@ import { selectWishlistItems } from "../../wishlist/wishlistSelectors";
 
 export default function ProductCard({ product }) {
   const dispatch = useDispatch();
+
   const wishlistItems = useSelector(selectWishlistItems);
 
   const isWishlist = wishlistItems.some((item) => item.id === product.id);
