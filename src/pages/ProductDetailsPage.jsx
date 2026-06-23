@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getProducts } from "../services/productsApi";
 import EmptyState from "../components/ui/EmptyState.jsx";
-import SkeletonCard from "../components/ui/SkeletonCard.jsx";
 import { ArrowLeft, Heart, Star, ShoppingCart } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../features/cart/cartSlice.js";
