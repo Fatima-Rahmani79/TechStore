@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { Minus, Plus, Trash2 } from "lucide-react";
 import {
   decreaseQuantity,
   increaseQuantity,
@@ -9,48 +10,60 @@ export default function CartItem({ item }) {
   const dispatch = useDispatch();
 
   return (
-    <div className="flex flex-col gap-4 rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:shadow-md sm:flex-row sm:items-center">
+    <div className="flex flex-col gap-4 rounded-2xl border border-[var(--border)] bg-[var(--bg-surface)] p-5 transition hover:border-[var(--accent)] sm:flex-row sm:items-center">
       <img
         src={item.images[0]}
-        alt={item.name}
-        className="h-28 w-28 rounded-xl object-cover"
+        alt={item.shortName || item.name}
+        className="h-24 w-24 rounded-xl bg-[var(--bg-subtle)] object-contain"
       />
 
       <div className="flex-1">
-        <h3 className="mb-2 text-lg font-semibold">{item.name}</h3>
-
-        <p className="text-xl font-bold">${item.price}</p>
+        <h3 className="font-semibold text-[var(--text-primary)]">
+          {item.shortName || item.name}
+        </h3>
+        <p className="mt-1 text-sm text-[var(--text-secondary)]">
+          {item.brand}
+        </p>
+        <p className="mt-2 font-mono text-lg font-bold text-[var(--text-primary)]">
+          ${item.price}
+        </p>
       </div>
 
-      <div className="flex items-center gap-3">
+      {/* Quantity */}
+      <div className="flex items-center gap-2">
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-300 transition hover:bg-neutral-100"
+          aria-label="Decrease quantity"
+          className="flex h-9 w-9 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--text-secondary)] transition hover:bg-[var(--bg-subtle)]"
           onClick={() => dispatch(decreaseQuantity(item.id))}
         >
-          -
+          <Minus size={14} />
         </button>
 
-        <span className="min-w-8 text-center font-semibold">
+        <span className="min-w-8 text-center text-sm font-semibold text-[var(--text-primary)]">
           {item.quantity}
         </span>
 
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-300 transition hover:bg-neutral-100"
+          aria-label="Increase quantity"
+          className="flex h-9 w-9 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--text-secondary)] transition hover:bg-[var(--bg-subtle)]"
           onClick={() => dispatch(increaseQuantity(item.id))}
         >
-          +
+          <Plus size={14} />
         </button>
       </div>
 
-      <div className="text-right">
-        <p className="mb-3 text-lg font-bold">
+      {/* Total + Remove */}
+      <div className="flex items-center justify-between gap-4 sm:flex-col sm:items-end">
+        <p className="font-mono text-lg font-bold text-[var(--text-primary)]">
           ${(item.price * item.quantity).toFixed(2)}
         </p>
 
         <button
-          className="rounded-lg bg-red-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-red-600"
+          aria-label="Remove item"
+          className="flex items-center gap-1.5 rounded-lg border border-[var(--border)] px-3 py-1.5 text-xs font-medium text-[var(--text-secondary)] transition hover:border-red-300 hover:bg-red-50 hover:text-red-500 dark:hover:bg-red-950"
           onClick={() => dispatch(removeFromCart(item.id))}
         >
+          <Trash2 size={13} />
           Remove
         </button>
       </div>
