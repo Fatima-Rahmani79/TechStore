@@ -93,6 +93,19 @@ export default function Navbar() {
               {totalItems > 0 && <Badge count={totalItems} />}
             </Link>
 
+            {/* Dark / Light */}
+            <button
+              onClick={toggle}
+              className="btn-icon"
+              aria-label="Toggle dark mode"
+            >
+              {isDark ? (
+                <Sun className="h-6 w-6" />
+              ) : (
+                <Moon className="h-6 w-6" />
+              )}
+            </button>
+
             {/* Hamburger */}
             <button
               className="btn-icon md:hidden"
@@ -105,14 +118,6 @@ export default function Navbar() {
               ) : (
                 <Menu className="h-5 w-5" />
               )}
-            </button>
-
-            <button
-              onClick={toggle}
-              className="btn-icon"
-              aria-label="Toggle dark mode"
-            >
-              {isDark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
           </div>
         </nav>
