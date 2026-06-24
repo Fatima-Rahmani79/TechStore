@@ -15,7 +15,7 @@ export default function Hero() {
         {/* ── Content ─────────────────────────────────────────────────── */}
         <div className="flex flex-col items-start">
           {/* Badge */}
-          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-neutral-200 px-4 py-1.5 text-sm font-medium text-neutral-600 dark:border-neutral-700 dark:text-neutral-400">
+          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-neutral-200 px-4 py-1.5 text-sm font-medium text-[var(--text-secondary)] dark:text-[var(--text-muted)]">
             <Zap
               size={13}
               className="text-[var(--accent)]"
@@ -25,7 +25,7 @@ export default function Hero() {
           </span>
 
           {/* Heading */}
-          <h1 className="mb-5 text-5xl font-bold leading-[1.1] tracking-tight text-neutral-900 dark:text-neutral-50 lg:text-6xl xl:text-7xl">
+          <h1 className="mb-5 text-5xl font-bold leading-[1.1]  text-[var(--text-primary)] lg:text-6xl xl:text-7xl">
             Technology
             <br />
             Designed For
@@ -38,7 +38,7 @@ export default function Hero() {
           </h1>
 
           {/* Description */}
-          <p className="mb-8 max-w-md text-base leading-relaxed text-neutral-500 dark:text-neutral-400 lg:text-lg">
+          <p className="mb-8 max-w-md text-base leading-relaxed text-[var(--text-muted)] lg:text-lg">
             Discover premium devices built for work, creativity and
             entertainment.
           </p>
@@ -47,7 +47,7 @@ export default function Hero() {
           <div className="mb-12 flex flex-wrap gap-3">
             <Link
               to="/shop"
-              className="inline-flex items-center gap-2 rounded-xl bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
+              className="inline-flex items-center gap-2 rounded-xl bg-var(--bg-page) px-6 py-3 text-sm font-semibold text-[var(--text-inverse)] transition hover:bg-neutral-700 dark:bg-white dark:text-[var(--text-primary)] dark:hover:bg-neutral-200"
             >
               Shop Now
               <ArrowRight size={15} />
@@ -55,7 +55,7 @@ export default function Hero() {
 
             <Link
               to="/shop"
-              className="inline-flex items-center gap-2 rounded-xl border border-neutral-200 px-6 py-3 text-sm font-semibold text-neutral-700 transition hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800"
+              className="inline-flex items-center gap-2 rounded-xl border border-[var(--border)] px-6 py-3 text-sm font-semibold text-[var(--text-secondary)] transition hover:bg-[var(--bg-muted)] dark:border-[var(--border)] dark:text-[var(--text-secondary)] dark:hover:bg-[var(--bg-muted)]"
             >
               Explore All
             </Link>
@@ -66,10 +66,12 @@ export default function Hero() {
             {stats.map(({ value, label }, i) => (
               <div key={label} className="flex items-center gap-8">
                 <div>
-                  <div className="font-mono text-xl font-bold text-neutral-900 dark:text-neutral-50">
+                  <div className="font-mono text-xl font-bold text-[var(--text-primary)]">
                     {value}
                   </div>
-                  <div className="text-xs text-neutral-400">{label}</div>
+                  <div className="text-xs text-[var(--text-muted)]">
+                    {label}
+                  </div>
                 </div>
                 {i < stats.length - 1 && (
                   <div className="h-8 w-px bg-neutral-200 dark:bg-neutral-700" />

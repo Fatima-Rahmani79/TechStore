@@ -101,7 +101,8 @@ export default function ProductDetails() {
     },
     product.bestSeller && {
       label: "Best Seller",
-      style: "bg-neutral-900 text-white dark:bg-white dark:text-neutral-900",
+      style:
+        "bg-[var(--text-primary)] text-[var(--text-inverse)] dark:bg-[var(--bg-surface)] dark:text-[var(--text-primary)]",
     },
     product.isNew && {
       label: "New",
@@ -180,7 +181,11 @@ export default function ProductDetails() {
 
           {/* Rating */}
           <div className="mt-4 flex items-center gap-2">
-            <Star size={16} fill="currentColor" className="text-yellow-400" />
+            <Star
+              size={16}
+              fill="currentColor"
+              className="text-[var(--accent)]"
+            />
             <span className="font-semibold text-[var(--text-primary)]">
               {product.rating.average}
             </span>
@@ -225,7 +230,9 @@ export default function ProductDetails() {
               <Heart
                 size={20}
                 className={
-                  isWishlisted ? "text-red-500" : "text-[var(--text-secondary)]"
+                  isWishlisted
+                    ? "text-[var(--danger)]"
+                    : "text-[var(--text-secondary)]"
                 }
                 fill={isWishlisted ? "currentColor" : "none"}
               />
@@ -289,7 +296,7 @@ export default function ProductDetails() {
                   <Star
                     size={14}
                     fill="currentColor"
-                    className="text-yellow-400"
+                    className="text-[var(--accent)]"
                   />
                   <span className="text-sm font-semibold text-[var(--text-primary)]">
                     {review.rating}

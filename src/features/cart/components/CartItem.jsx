@@ -60,7 +60,7 @@ export default function CartItem({ item }) {
 
         <button
           aria-label="Remove item"
-          className="flex items-center gap-1.5 rounded-lg border border-[var(--border)] px-3 py-1.5 text-xs font-medium text-[var(--text-secondary)] transition hover:border-red-300 hover:bg-red-50 hover:text-red-500 dark:hover:bg-red-950"
+          className="flex items-center gap-1.5 rounded-lg border border-[var(--border)] px-3 py-1.5 text-xs font-medium text-[var(--text-secondary)] transition hover:border-[var(--danger-border)] hover:bg-[var(--danger-bg)] hover:text-[var(--danger)] dark:hover:bg-[var(--danger-dark-bg)]"
           onClick={() => dispatch(removeFromCart(item.id))}
         >
           <Trash2 size={13} />

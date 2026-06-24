@@ -27,7 +27,7 @@ export default function CartSummary() {
         <div className="flex justify-between text-sm">
           <span className="text-[var(--text-secondary)]">Shipping</span>
           {shipping === 0 ? (
-            <span className="font-medium text-green-500">Free</span>
+            <span className="font-medium text-[var(--success)]">Free</span>
           ) : (
             <span className="font-medium text-[var(--text-primary)]">
               ${shipping.toFixed(2)}

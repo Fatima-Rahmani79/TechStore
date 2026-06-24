@@ -39,7 +39,7 @@ export default function Categories() {
 
         <h2 className="text-4xl font-display">Shop by Category</h2>
 
-        <p className="mt-3 max-w-xl text-neutral-600">
+        <p className="mt-3 max-w-xl text-[var(--text-secondary)]">
           Explore our collection of laptops, monitors, audio devices, and
           accessories designed for modern work and entertainment.
         </p>

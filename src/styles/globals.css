@@ -23,6 +23,16 @@
   --accent-hover: #ffe358;
   --accent-text: #1c1b1a; /* روی accent همیشه dark */
 
+  /* Status colors */
+  --success: #16a34a;
+  --danger: #ef4444;
+  --danger-border: #fecaca;
+  --danger-bg: #fef2f2;
+  --danger-dark-bg: #661010;
+
+  /* Overlay text */
+  --text-on-dark: #ffffff;
+
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.06);
   --shadow: 0 1px 4px 0 rgb(0 0 0 / 0.08), 0 0 0 0.5px rgb(0 0 0 / 0.06);
@@ -47,6 +57,16 @@
   --accent: #e8ff59; /* accent روی dark خیلی خوب pop می‌کنه */
   --accent-hover: #f5ff8a;
   --accent-text: #111110;
+
+  /* Status colors */
+  --success: #86efac;
+  --danger: #f87171;
+  --danger-border: #fca5a5;
+  --danger-bg: #7f1d1d;
+  --danger-dark-bg: #661010;
+
+  /* Overlay text */
+  --text-on-dark: #ffffff;
 
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
   --shadow: 0 1px 4px 0 rgb(0 0 0 / 0.4);

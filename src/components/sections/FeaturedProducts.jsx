@@ -23,7 +23,7 @@ export default function FeaturedProducts() {
 
           <h2 className="text-4xl font-display">Featured Products</h2>
 
-          <p className="mt-3 max-w-xl text-neutral-600">
+          <p className="mt-3 max-w-xl text-[var(--text-secondary)]">
             Discover our handpicked selection of featured products, showcasing
           </p>
         </div>
