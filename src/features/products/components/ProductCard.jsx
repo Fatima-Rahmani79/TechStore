@@ -67,9 +67,7 @@ export default function ProductCard({ product }) {
           <Heart
             size={15}
             className={
-              isWishlisted
-                ? "text-[var(--danger)]"
-                : "text-[var(--text-muted)]"
+              isWishlisted ? "text-[var(--danger)]" : "text-[var(--text-muted)]"
             }
             fill={isWishlisted ? "currentColor" : "none"}
           />
@@ -78,7 +76,7 @@ export default function ProductCard({ product }) {
 
       {/* Content */}
       <div className="flex flex-1 flex-col gap-2 p-4">
-        <span className="w-fit rounded-full bg-[var(--bg-subtle)] px-3 py-0.5 text-xs font-medium capitalize text-[var(--text-muted)]">
+        <span className="w-fit rounded-full bg-[var(--bg-muted)] px-3 py-0.5 text-xs font-medium capitalize text-[var(--text-secondary)]">
           {product.category}
         </span>
 
@@ -102,7 +100,7 @@ export default function ProductCard({ product }) {
               to={`/products/${product.id}`}
               onClick={(e) => e.stopPropagation()}
               aria-label={`View details for ${product.shortName}`}
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-[var(--border)] text-[var(--text-muted)] transition hover:border-[var(--border-strong)] hover:text-[var(--text-primary)]"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-[var(--border-strong)] text-[var(--text-secondary)] transition hover:border-[var(--border-strong)] hover:text-[var(--text-primary)]"
             >
               <ArrowRight size={14} />
             </Link>
@@ -111,7 +109,7 @@ export default function ProductCard({ product }) {
             <button
               onClick={handleAddToCart}
               aria-label={`Add ${product.shortName} to cart`}
-              className="flex items-center gap-1.5 rounded-full bg-[var(--text-primary)] px-3 py-1.5 text-xs font-semibold text-[var(--text-inverse)] transition hover:bg-[var(--bg-muted)] dark:bg-[var(--bg-surface)] dark:text-[var(--text-primary)] dark:hover:bg-[var(--bg-muted)]"
+              className="flex items-center gap-1.5 rounded-full bg-[var(--text-primary)] px-3 py-1.5 text-xs font-semibold text-[var(--text-inverse)] transition hover:bg-[var(--bg-muted)] dark:bg-[var(--bg-surface)] dark:text-[var(--text-primary)] dark:hover:bg-[var(--bg-muted)] cursor-pointer"
             >
               <ShoppingCart size={13} />
               Add

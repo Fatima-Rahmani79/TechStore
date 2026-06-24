@@ -15,7 +15,7 @@ export default function Hero() {
         {/* ── Content ─────────────────────────────────────────────────── */}
         <div className="flex flex-col items-start">
           {/* Badge */}
-          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-neutral-200 px-4 py-1.5 text-sm font-medium text-[var(--text-secondary)] dark:text-[var(--text-muted)]">
+          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--border-strong)] px-4 py-1.5 text-sm font-medium text-[var(--text-secondary)]">
             <Zap
               size={13}
               className="text-[var(--accent)]"
@@ -47,7 +47,7 @@ export default function Hero() {
           <div className="mb-12 flex flex-wrap gap-3">
             <Link
               to="/shop"
-              className="inline-flex items-center gap-2 rounded-xl bg-var(--bg-page) px-6 py-3 text-sm font-semibold text-[var(--text-inverse)] transition hover:bg-neutral-700 dark:bg-white dark:text-[var(--text-primary)] dark:hover:bg-neutral-200"
+              className="inline-flex items-center gap-2 rounded-xl bg-[var(--text-primary)] px-6 py-3 text-sm font-semibold text-[var(--text-inverse)] transition hover:bg-neutral-700 dark:bg-white dark:text-[var(--text-primary)] dark:hover:bg-neutral-200"
             >
               Shop Now
               <ArrowRight size={15} />
@@ -81,7 +81,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* ── Image ───────────────────────────────────────────────────── */}
+        {/* ── Image ── */}
         <div className="relative flex items-center justify-center">
           {/* Glow*/}
           <div className="absolute inset-0 -z-10 rounded-3xl bg-[var(--accent)] opacity-[0.07] blur-3xl" />
