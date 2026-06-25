@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send, Sparkles } from "lucide-react";
-import { getAiResponse } from "./aiApi";
+import { getAiResponse } from "../aiApi";
 
 const SUGGESTIONS = [
   "Best laptop under $500?",
