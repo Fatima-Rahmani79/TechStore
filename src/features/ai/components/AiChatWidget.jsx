@@ -138,6 +138,21 @@ export default function AiChatWidget() {
             <div ref={messagesEndRef} />
           </div>
 
+          {/* Suggestions */}
+          {showSuggestions && (
+            <div className="flex flex-wrap gap-2 border-t border-[var(--border)] px-4 py-3">
+              {SUGGESTIONS.map((s) => (
+                <button
+                  key={s}
+                  onClick={() => sendMessage(s)}
+                  className="rounded-full border border-[var(--border)] px-3 py-1 text-xs text-[var(--text-secondary)] transition hover:border-[var(--accent)] hover:text-[var(--text-primary)]"
+                >
+                  {s}
+                </button>
+              ))}
+            </div>
+          )}
+
           {/* Input */}
           <div className="flex items-center gap-2 border-t border-[var(--border)] px-3 py-3">
             <input
@@ -160,6 +175,13 @@ export default function AiChatWidget() {
           </div>
         </div>
       )}
+
+      <style>{`
+        @keyframes bounce {
+          0%, 60%, 100% { transform: translateY(0); }
+          30% { transform: translateY(-4px); }
+        }
+      `}</style>
     </>
   );
 }
