@@ -95,3 +95,46 @@ function extractBudget(msg) {
   const match = msg.match(/\$?(\d+)/);
   return match ? Number(match[1]) : null;
 }
+
+// ── Main function — ─────────────────
+export async function getAiResponse(messages) {
+  // simulate network delay
+  await new Promise((r) => setTimeout(r, 600 + Math.random() * 600));
+
+  const lastMsg = messages[messages.length - 1].content.toLowerCase();
+
+  for (const rule of RULES) {
+    if (rule.keywords.some((kw) => lastMsg.includes(kw))) {
+      return rule.reply(lastMsg);
+    }
+  }
+
+  // fallback
+  return `I'm not sure about that, but I can help you find laptops, monitors, headphones, or accessories. What are you looking for?`;
+}
+
+/* ── After API Key: ──────────────────────────
+
+import products from "../../data/products.json";
+
+function buildContext() {
+  return products.map(p =>
+    `- ${p.shortName} | $${p.price} | ${p.category} | ${p.brand} | Rating: ${p.rating.average}/5`
+  ).join("\n");
+}
+
+export async function getAiResponse(messages) {
+  const response = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      model: "claude-sonnet-4-20250514",
+      max_tokens: 1000,
+      system: `You are a helpful assistant for TechStore. Only answer based on these products:\n${buildContext()}\nKeep answers short (2-3 sentences). Respond in English.`,
+      messages: messages.map(m => ({ role: m.role, content: m.content })),
+    }),
+  });
+  const data = await response.json();
+  return data.content[0].text;
+}
+*/
