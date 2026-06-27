@@ -1,14 +1,15 @@
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   selectCartTotalItems,
   selectCartTotalPrice,
 } from "../features/cart/cartSelectors";
-import { useState } from "react";
 import { clearCart } from "../features/cart/cartSlice";
-import { ArrowLeft, Check, ShoppingBag } from "lucide-react";
+import { ShoppingBag, Check, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const STEPS = ["Cart", "Detais", "Confirm"];
+const STEPS = ["Cart", "Details", "Confirm"];
 
 export default function CheckoutPage() {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ export default function CheckoutPage() {
   const totalPrice = useSelector(selectCartTotalPrice);
   const items = useSelector((state) => state.cart.items);
 
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(0); // 0: details, 1: confirm, 2: success
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -32,8 +33,7 @@ export default function CheckoutPage() {
   const shipping = totalPrice > 500 ? 0 : 9.99;
   const total = totalPrice + shipping;
 
-  //   Validation ------------------------------------------
-
+  // ── Validation ───────────────────────────────────────────────────────────
   function validate() {
     const errs = {};
     if (!form.name.trim()) errs.name = "Name is required";
@@ -62,13 +62,14 @@ export default function CheckoutPage() {
 
   async function handleConfirm() {
     setLoading(true);
+    // simulate processing
     await new Promise((r) => setTimeout(r, 1500));
     dispatch(clearCart());
     setStep(2);
     setLoading(false);
   }
 
-  //   Success ------------------------
+  // ── Success ──────────────────────────────────────────────────────────────
   if (step === 2) {
     const orderNumber = `TS-${Math.floor(Math.random() * 90000) + 10000}`;
     return (
@@ -371,6 +372,7 @@ export default function CheckoutPage() {
     </div>
   );
 }
+
 // ── Field component ──────────────────────────────────────────────────────────
 function Field({
   label,
