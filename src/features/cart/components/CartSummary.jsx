@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { selectCartTotalItems, selectCartTotalPrice } from "../cartSelectors";
 import { ShoppingBag } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function CartSummary() {
   const totalItems = useSelector(selectCartTotalItems);
@@ -51,10 +52,13 @@ export default function CartSummary() {
         </div>
       </div>
 
-      <button className="btn-primary mt-6 flex w-full items-center justify-center gap-2 py-3.5">
+      <Link
+        to="/checkout"
+        className="btn-primary mt-6 flex w-full items-center justify-center gap-2 py-3.5"
+      >
         <ShoppingBag size={17} />
         Checkout
-      </button>
+      </Link>
 
       <p className="mt-3 text-center text-xs text-[var(--text-secondary)]">
         Secure checkout · Free returns

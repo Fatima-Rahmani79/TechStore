@@ -71,7 +71,7 @@ const features = [
 export default function About() {
   return (
     <div className="mx-auto max-w-7xl px-6 py-16">
-      {/* ── Hero ──────────────────────────────────────────────────────── */}
+      {/* ── Hero ──*/}
       <div className="mb-20">
         <p className="badge badge-accent mb-4">About</p>
         <h1 className="max-w-2xl text-5xl font-bold leading-tight tracking-tight text-[var(--text-primary)]">
@@ -84,7 +84,7 @@ export default function About() {
         </p>
       </div>
 
-      {/* ── Features ──────────────────────────────────────────────────── */}
+      {/* ── Features ──*/}
       <div className="mb-20">
         <h2 className="mb-2 text-2xl font-bold text-[var(--text-primary)]">
           Features
@@ -114,7 +114,7 @@ export default function About() {
         </div>
       </div>
 
-      {/* ── Tech Stack ────────────────────────────────────────────────── */}
+      {/* ── Tech Stack ──*/}
       <div className="mb-20">
         <h2 className="mb-2 text-2xl font-bold text-[var(--text-primary)]">
           Tech Stack
@@ -142,7 +142,7 @@ export default function About() {
         </div>
       </div>
 
-      {/* ── Developer Card ────────────────────────────────────────────── */}
+      {/* ── Developer Card ──*/}
       <div className="mb-20 overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--bg-surface)]">
         <div className="h-2 w-full bg-[var(--accent)]" />
         <div className="flex flex-col gap-8 p-8 sm:flex-row sm:items-start">
@@ -197,7 +197,7 @@ export default function About() {
         </div>
       </div>
 
-      {/* ── CTA ───────────────────────────────────────────────────────── */}
+      {/* ── CTA ──*/}
       <div className="rounded-3xl border border-[var(--border)] bg-[var(--bg-surface)] p-10 text-center">
         <h2 className="text-2xl font-bold text-[var(--text-primary)]">
           Ready to explore?

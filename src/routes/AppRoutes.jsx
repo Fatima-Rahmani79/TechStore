@@ -8,6 +8,7 @@ import NotFound from "../pages/NotFoundPage";
 import MainLayout from "../layout/MainLayout";
 import Shop from "../pages/Shop";
 import About from "../pages/About";
+import CheckoutPage from "../pages/CheckoutPage";
 
 export default function AppRoutes() {
   return (
@@ -19,6 +20,7 @@ export default function AppRoutes() {
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/about" element={<About />} />
         <Route path="/products/:id" element={<ProductDetails />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
 
         <Route path="*" element={<NotFound />} />
       </Route>
