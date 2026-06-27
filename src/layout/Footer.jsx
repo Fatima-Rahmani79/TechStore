@@ -16,25 +16,19 @@ const productLinks = [
 
   {
     label: "Monitors",
-
     to: "/shop?category=monitor",
-
     icon: <Monitor size={16} />,
   },
 
   {
     label: "Audio",
-
     to: "/shop?category=audio",
-
     icon: <Headphones size={16} />,
   },
 
   {
     label: "Accessories",
-
     to: "/shop?category=accessory",
-
     icon: <Mouse size={16} />,
   },
 ];
@@ -53,49 +47,42 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="mt-20 border-t border-neutral-200 bg-[var(--bg-surface)] text-white">
+    <footer className="mt-20 border-t border-[var(--border)] bg-[var(--bg-surface)]">
       {/* Features */}
-      <div className="border-b border-neutral-800">
+      <div className="border-b border-[var(--border)]">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 py-10 md:grid-cols-4">
-          <div className="flex items-center gap-3">
-            <Truck className="text-[var(--accent)]" />
-
-            <div>
-              <h4 className="font-semibold">Free Shipping</h4>
-
-              <p className="text-sm text-neutral-400">Orders over $100</p>
+          {[
+            {
+              icon: <Truck />,
+              title: "Free Shipping",
+              desc: "Orders over $100",
+            },
+            {
+              icon: <ShieldCheckIcon />,
+              title: "Secure Payment",
+              desc: "100% Protected",
+            },
+            {
+              icon: <Headset />,
+              title: "24/7 Support",
+              desc: "Always here to help",
+            },
+            {
+              icon: <CreditCard />,
+              title: "Easy Checkout",
+              desc: "Fast & Simple",
+            },
+          ].map(({ icon, title, desc }) => (
+            <div key={title} className="flex items-center gap-3">
+              <span className="text-[var(--accent)]">{icon}</span>
+              <div>
+                <h4 className="font-semibold text-[var(--text-primary)]">
+                  {title}
+                </h4>
+                <p className="text-sm text-[var(--text-secondary)]">{desc}</p>
+              </div>
             </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <ShieldCheckIcon className="text-[var(--accent)]" />
-
-            <div>
-              <h4 className="font-semibold">Secure Payment</h4>
-
-              <p className="text-sm text-neutral-400">100% Protected</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <Headset className="text-[var(--accent)]" />
-
-            <div>
-              <h4 className="font-semibold">24/7 Support</h4>
-
-              <p className="text-sm text-neutral-400">Always here to help</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <CreditCard className="text-[var(--accent)]" />
-
-            <div>
-              <h4 className="font-semibold">Easy Checkout</h4>
-
-              <p className="text-sm text-neutral-400">Fast & Simple</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -104,10 +91,9 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <h2 className="text-3xl font-extrabold tracking-tight">
+            <h2 className="text-3xl font-extrabold tracking-tight text-[var(--text-primary)]">
               Tech<span className="text-[var(--accent)]">Store.</span>
             </h2>
-
             <p className="mt-5 leading-7 text-[var(--text-secondary)]">
               Modern technology products for work, entertainment, gaming and
               everyday productivity.
@@ -116,17 +102,17 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="mb-5 font-semibold">Products</h3>
-
+            <h3 className="mb-5 font-semibold text-[var(--text-primary)]">
+              Products
+            </h3>
             <ul className="space-y-4">
               {productLinks.map((item) => (
                 <li key={item.label}>
                   <Link
                     to={item.to}
-                    className="flex items-center gap-3 text-[var(--text-secondary)] transition hover:text-[var(--text-muted)]"
+                    className="flex items-center gap-3 text-[var(--text-secondary)] transition hover:text-[var(--text-primary)]"
                   >
                     {item.icon}
-
                     {item.label}
                   </Link>
                 </li>
@@ -135,16 +121,16 @@ export default function Footer() {
           </div>
 
           {/* Company */}
-
           <div>
-            <h3 className="mb-5 font-semibold">Company</h3>
-
+            <h3 className="mb-5 font-semibold text-[var(--text-primary)]">
+              Company
+            </h3>
             <ul className="space-y-4">
               {companyLinks.map((item) => (
                 <li key={item.label}>
                   <Link
                     to={item.to}
-                    className="text-[var(--text-secondary)] transition hover:text-[var(--text-muted)]"
+                    className="text-[var(--text-secondary)] transition hover:text-[var(--text-primary)]"
                   >
                     {item.label}
                   </Link>
@@ -155,7 +141,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="mb-2 text-sm font-semibold text-[var(--text-primary)]">
+            <h3 className="mb-5 font-semibold text-[var(--text-primary)]">
               Connect
             </h3>
             <ul className="space-y-3">
@@ -165,10 +151,10 @@ export default function Footer() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-[var(--text-secondary)] transition hover:text-[var(--text-muted)]"
+                    className="text-sm text-[var(--text-secondary)] transition hover:text-[var(--text-primary)]"
                   >
                     {label}{" "}
-                    <span className="text-[var(--accent)] font-extrabold">
+                    <span className="font-extrabold text-[var(--accent)]">
                       ↗
                     </span>
                   </a>
@@ -178,8 +164,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-6 border-t border-neutral-800 pt-6 md:flex-row md:items-center md:justify-between">
-          <p className="text-sm text-neutral-500">
+        {/* Bottom */}
+        <div className="mt-10 border-t border-[var(--border)] pt-6">
+          <p className="text-sm text-[var(--text-secondary)]">
             © 2026 TechStore. All rights reserved.
           </p>
         </div>
