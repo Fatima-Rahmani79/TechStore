@@ -53,9 +53,8 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="mt-20 border-t border-neutral-200 bg-neutral-950 text-white">
+    <footer className="mt-20 border-t border-neutral-200 bg-[var(--bg-surface)] text-white">
       {/* Features */}
-
       <div className="border-b border-neutral-800">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 py-10 md:grid-cols-4">
           <div className="flex items-center gap-3">
@@ -101,24 +100,21 @@ export default function Footer() {
       </div>
 
       {/* Main Footer */}
-
-      <div className="mx-auto max-w-7xl px-6 py-16">
+      <div className="mx-auto max-w-7xl px-6 py-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
-
           <div>
             <h2 className="text-3xl font-extrabold tracking-tight">
               Tech<span className="text-[var(--accent)]">Store.</span>
             </h2>
 
-            <p className="mt-5 leading-7 text-neutral-400">
+            <p className="mt-5 leading-7 text-[var(--text-secondary)]">
               Modern technology products for work, entertainment, gaming and
               everyday productivity.
             </p>
           </div>
 
           {/* Products */}
-
           <div>
             <h3 className="mb-5 font-semibold">Products</h3>
 
@@ -127,7 +123,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     to={item.to}
-                    className="flex items-center gap-3 text-neutral-400 transition hover:text-white"
+                    className="flex items-center gap-3 text-[var(--text-secondary)] transition hover:text-[var(--text-muted)]"
                   >
                     {item.icon}
 
@@ -148,7 +144,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     to={item.to}
-                    className="text-neutral-400 transition hover:text-white"
+                    className="text-[var(--text-secondary)] transition hover:text-[var(--text-muted)]"
                   >
                     {item.label}
                   </Link>
@@ -157,37 +153,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
-
-          <div>
-            <h3 className="mb-5 font-semibold">Stay Updated</h3>
-
-            <p className="mb-5 text-sm leading-6 text-neutral-400">
-              Subscribe to receive updates about new arrivals and exclusive
-              offers.
-            </p>
-
-            <div className="space-y-3">
-              <input
-                type="email"
-                placeholder="Email address"
-                className="w-full rounded-xl border border-neutral-700 bg-neutral-900 px-4 py-3 outline-none transition focus:border-[var(--accent)]"
-              />
-
-              <button className="btn-primary w-full">Subscribe</button>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom */}
-
-        <div className="mt-16 flex flex-col gap-6 border-t border-neutral-800 pt-6 md:flex-row md:items-center md:justify-between">
-          <p className="text-sm text-neutral-500">
-            © 2026 TechStore. All rights reserved.
-          </p>
           {/* Social */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold text-[var(--text-primary)]">
+            <h3 className="mb-2 text-sm font-semibold text-[var(--text-primary)]">
               Connect
             </h3>
             <ul className="space-y-3">
@@ -197,14 +165,23 @@ export default function Footer() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-[var(--text-secondary)] transition hover:text-[var(--text-primary)]"
+                    className="text-sm text-[var(--text-secondary)] transition hover:text-[var(--text-muted)]"
                   >
-                    {label} ↗
+                    {label}{" "}
+                    <span className="text-[var(--accent)] font-extrabold">
+                      ↗
+                    </span>
                   </a>
                 </li>
               ))}
             </ul>
           </div>
+        </div>
+
+        <div className="mt-10 flex flex-col gap-6 border-t border-neutral-800 pt-6 md:flex-row md:items-center md:justify-between">
+          <p className="text-sm text-neutral-500">
+            © 2026 TechStore. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
