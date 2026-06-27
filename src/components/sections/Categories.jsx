@@ -1,8 +1,8 @@
 import CategoryCard from "../../features/products/components/CategoryCard";
-import laptopsCategory from "../../assets/images/laptops.jpg";
-import monitorsCategory from "../../assets/images/monitor.webp";
-import audioCategory from "../../assets/images/audio.jpg";
-import accessoriesCategory from "../../assets/images/accessory.webp";
+import laptopsCategory from "../../assets/images/laptop.webp";
+import monitorsCategory from "../../assets/images/monitor.jpg";
+import audioCategory from "../../assets/images/audio.webp";
+import accessoriesCategory from "../../assets/images/accessory.jpg";
 
 const categories = [
   {

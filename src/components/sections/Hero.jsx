@@ -13,16 +13,7 @@ export default function Hero() {
     <section className="mx-auto max-w-7xl px-4 py-4">
       <div className="grid items-center gap-12 lg:gap-20 py-12 lg:min-h-[calc(100vh-80px)] lg:grid-cols-2">
         {/* ── Content ── */}
-        <div
-          className="
-flex
-flex-col
-items-center
-text-center
-lg:items-start
-lg:text-left
-"
-        >
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
           {/* Badge */}
           <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--border-strong)] px-4 py-1.5 text-sm font-medium text-[var(--text-secondary)]">
             <Zap
@@ -71,15 +62,7 @@ lg:text-left
           </div>
 
           {/* Stats */}
-          <div
-            className="
-flex
-flex-wrap
-justify-center
-gap-8
-lg:justify-start
-"
-          >
+          <div className="flex flex-wrap justify-center gap-8 lg:justify-start">
             {stats.map(({ value, label }, i) => (
               <div key={label} className="flex items-center gap-8">
                 <div>
@@ -101,8 +84,7 @@ lg:justify-start
         {/* ── Image ── */}
         <div
           className="
-          w-full mx-auto sm:max-w-md max-w-sm lg:max-w-xl xl:max-w-2xl object-contain drop-shadow-xl
-"
+          w-full mx-auto sm:max-w-md max-w-sm lg:max-w-xl xl:max-w-2xl object-contain drop-shadow-xl"
         >
           {/* Glow*/}
           <div className="absolute inset-0 -z-10 rounded-3xl bg-[var(--accent)] opacity-[0.07] blur-3xl" />
@@ -110,8 +92,7 @@ lg:justify-start
           <img
             src={heroImage}
             alt="Featured tech products including laptops, monitors and headphones"
-            className="w-full max-w-xl object-contain drop-shadow-xl
-                       dark:brightness-90 dark:contrast-110"
+            className="w-full max-w-xl object-contain drop-shadow-xl dark:brightness-90 dark:contrast-110"
           />
         </div>
       </div>

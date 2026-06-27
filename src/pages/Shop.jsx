@@ -73,7 +73,7 @@ export default function Shop() {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12">
-      {/* ── Header ──────────────────────────────────────────────────── */}
+      {/* ── Header ─────────────────*/}
       <div className="mb-10">
         <p className="badge badge-accent mb-3">Catalog</p>
         <h1 className="text-4xl font-bold tracking-tight text-[var(--text-primary)]">
@@ -84,7 +84,7 @@ export default function Shop() {
         </p>
       </div>
 
-      {/* ── Search + Sort ────────────────────────────────────────────── */}
+      {/* ── Search + Sort ───────────*/}
       <div className="mb-4 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
         <div className="w-full lg:max-w-2xl">
           <SearchBar />
@@ -92,13 +92,13 @@ export default function Shop() {
         <SortSelect sortBy={sortBy} onSortBy={setSortBy} />
       </div>
 
-      {/* ── Filters ─────────────────────────────────────────────────── */}
+      {/* ── Filters ──────────────────────*/}
       <ProductFilters
         selectedCategory={selectedCategory}
         onSelectCategory={setSelectedCategory}
       />
 
-      {/* ── Result count + clear ────────────────────────────────────── */}
+      {/* ── Result count + clear ─────────*/}
       <div className="mb-6 flex items-center justify-between">
         <p className="text-sm text-[var(--text-secondary)]">
           {loading ? (
@@ -124,7 +124,7 @@ export default function Shop() {
         )}
       </div>
 
-      {/* ── Content ─────────────────────────────────────────────────── */}
+      {/* ── Content ────────────────*/}
       {error ? (
         <EmptyState
           icon={<SearchX size={32} />}
