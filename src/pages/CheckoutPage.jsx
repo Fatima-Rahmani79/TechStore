@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import {
   selectCartTotalItems,
   selectCartTotalPrice,
@@ -13,7 +12,6 @@ const STEPS = ["Cart", "Details", "Confirm"];
 
 export default function CheckoutPage() {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const totalItems = useSelector(selectCartTotalItems);
   const totalPrice = useSelector(selectCartTotalPrice);

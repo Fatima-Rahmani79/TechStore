@@ -15,7 +15,7 @@ import {
 export default function ProductDetails() {
   const [products, setProducts] = useState([]);
   const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true); // ← اضافه شد
+  const [loading, setLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState("");
 
   const { id } = useParams();
@@ -44,6 +44,27 @@ export default function ProductDetails() {
     { label: "Color", value: product?.color },
   ];
 
+  // ── Form state
+
+  const [form, setForm] = useState({ user: "", rating: 5, comment: "" });
+  const [error, setError] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (!form.user.trim() || !form.comment.trim()) {
+      setError("Please fill in all fields.");
+      return;
+    }
+    const newReview = {
+      ...form,
+      date: new Date().toISOString().split("T")[0], // 2026-06-27
+    };
+    setReviews((prev) => [newReview, ...prev]);
+    setForm({ user: "", rating: 5, comment: "" });
+    setError("");
+  }
+
+  const [reviews, setReviews] = useState([]);
   useEffect(() => {
     async function loadProduct() {
       try {
@@ -52,6 +73,7 @@ export default function ProductDetails() {
         const found = productsData.find((p) => p.id === Number(id));
         setProduct(found || null);
         if (found) setSelectedImage(found.images[0]);
+        setReviews(found.reviews || []);
       } finally {
         setLoading(false);
       }
@@ -59,7 +81,7 @@ export default function ProductDetails() {
     loadProduct();
   }, [id]);
 
-  // ── Loading ──────────────────────────────────────────────────────────────
+  // ── Loading ────────────
   if (loading) {
     return (
       <div className="mx-auto max-w-7xl px-6 py-12">
@@ -112,7 +134,7 @@ export default function ProductDetails() {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12">
-      {/* Back — Link نه button داخل Link */}
+      {/* Back — Link  */}
       <Link
         to="/shop"
         className="btn-secondary mb-8 inline-flex items-center gap-2"
@@ -265,14 +287,80 @@ export default function ProductDetails() {
         </div>
       </div>
 
-      {/* ── Reviews ───────────────────────────────────────────────────── */}
       <section className="mt-20">
         <h2 className="mb-6 text-2xl font-bold text-[var(--text-primary)]">
-          Customer Reviews ({product.rating.count})
+          Customer Reviews ({reviews.length})
         </h2>
 
+        {/* ── Form ── */}
+        <form
+          onSubmit={handleSubmit}
+          className="mb-8 rounded-2xl border border-[var(--border)] bg-[var(--bg-surface)] p-6"
+        >
+          <h3 className="mb-4 font-semibold text-[var(--text-primary)]">
+            Write a Review
+          </h3>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-[var(--text-primary)]">
+                Name
+              </label>
+              <input
+                value={form.user}
+                onChange={(e) =>
+                  setForm((p) => ({ ...p, user: e.target.value }))
+                }
+                placeholder="Your name"
+                className="w-full rounded-xl border border-[var(--border)] bg-[var(--bg-subtle)] px-4 py-2.5 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent)]"
+              />
+            </div>
+
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-[var(--text-primary)]">
+                Rating
+              </label>
+              <select
+                value={form.rating}
+                onChange={(e) =>
+                  setForm((p) => ({ ...p, rating: Number(e.target.value) }))
+                }
+                className="w-full rounded-xl border border-[var(--border)] bg-[var(--bg-subtle)] px-4 py-2.5 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent)]"
+              >
+                {[5, 4, 3, 2, 1].map((r) => (
+                  <option key={r} value={r}>
+                    {"⭐".repeat(r)} — {r}/5
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          <div className="mt-4">
+            <label className="mb-1.5 block text-sm font-medium text-[var(--text-primary)]">
+              Comment
+            </label>
+            <textarea
+              value={form.comment}
+              onChange={(e) =>
+                setForm((p) => ({ ...p, comment: e.target.value }))
+              }
+              placeholder="Share your experience..."
+              rows={3}
+              className="w-full rounded-xl border border-[var(--border)] bg-[var(--bg-subtle)] px-4 py-2.5 text-sm text-[var(--text-primary)] outline-none focus:border-[var(--accent)] resize-none"
+            />
+          </div>
+
+          {error && <p className="mt-2 text-xs text-red-500">{error}</p>}
+
+          <button type="submit" className="btn-primary mt-4">
+            Submit Review
+          </button>
+        </form>
+
+        {/* ── Review ── */}
         <div className="space-y-4">
-          {product.reviews.map((review, i) => (
+          {reviews.map((review, i) => (
             <div
               key={`${review.user}-${i}`}
               className="rounded-2xl border border-[var(--border)] bg-[var(--bg-surface)] p-5"
