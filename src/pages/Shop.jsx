@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom"; // ← اضافه شد
 import ProductFilters from "../features/products/components/ProductFilters";
 import ProductGrid from "../features/products/components/ProductGrid";
 import { getProducts } from "../services/productsApi";
@@ -11,13 +12,21 @@ import { SearchX, SlidersHorizontal } from "lucide-react";
 
 export default function Shop() {
   const [products, setProducts] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortBy, setSortBy] = useState("default");
-  const [loading, setLoading] = useState(true); // ← فعال شد
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const { searchTerm, setSearchTerm } = useSearch();
 
+  // ── URL params ──
+  const [searchParams, setSearchParams] = useSearchParams();
+  const selectedCategory = searchParams.get("category") || "all";
+
+  function setSelectedCategory(category) {
+    setSearchParams(category === "all" ? {} : { category });
+  }
+
+  // ── filtering / sorting ───
   const filteredProducts =
     selectedCategory === "all"
       ? products
@@ -46,7 +55,6 @@ export default function Shop() {
     default:
       break;
   }
-  // ─────────────────────────────────────────────────────────────────
 
   useEffect(() => {
     async function loadProducts() {
@@ -71,20 +79,29 @@ export default function Shop() {
     setSortBy("default");
   }
 
+  // ── category label for header ──
+  const categoryLabels = {
+    all: "All Products",
+    laptop: "Laptops",
+    monitor: "Monitors",
+    audio: "Audio",
+    accessory: "Accessories",
+  };
+
   return (
     <div className="mx-auto max-w-7xl px-6 py-12">
-      {/* ── Header ─────────────────*/}
+      {/* Header */}
       <div className="mb-10">
         <p className="badge badge-accent mb-3">Catalog</p>
         <h1 className="text-4xl font-bold tracking-tight text-[var(--text-primary)]">
-          Shop
+          {categoryLabels[selectedCategory] || "Shop"}
         </h1>
         <p className="mt-2 text-[var(--text-secondary)]">
           Browse our collection of premium technology products.
         </p>
       </div>
 
-      {/* ── Search + Sort ───────────*/}
+      {/* Search + Sort */}
       <div className="mb-4 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
         <div className="w-full lg:max-w-2xl">
           <SearchBar />
@@ -92,13 +109,13 @@ export default function Shop() {
         <SortSelect sortBy={sortBy} onSortBy={setSortBy} />
       </div>
 
-      {/* ── Filters ──────────────────────*/}
+      {/* Filters */}
       <ProductFilters
         selectedCategory={selectedCategory}
         onSelectCategory={setSelectedCategory}
       />
 
-      {/* ── Result count + clear ─────────*/}
+      {/* Result count + clear */}
       <div className="mb-6 flex items-center justify-between">
         <p className="text-sm text-[var(--text-secondary)]">
           {loading ? (
@@ -124,7 +141,7 @@ export default function Shop() {
         )}
       </div>
 
-      {/* ── Content ────────────────*/}
+      {/* Content */}
       {error ? (
         <EmptyState
           icon={<SearchX size={32} />}
