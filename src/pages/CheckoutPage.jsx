@@ -8,7 +8,7 @@ import { useState } from "react";
 import { clearCart } from "../features/cart/cartSlice";
 import { ArrowLeft, Check, ShoppingBag } from "lucide-react";
 
-const steps = ["Cart", "Detais", "Confirm"];
+const STEPS = ["Cart", "Detais", "Confirm"];
 
 export default function CheckoutPage() {
   const dispatch = useDispatch();
@@ -368,6 +368,37 @@ export default function CheckoutPage() {
           </p>
         </div>
       </div>
+    </div>
+  );
+}
+// ── Field component ──────────────────────────────────────────────────────────
+function Field({
+  label,
+  name,
+  value,
+  onChange,
+  error,
+  placeholder,
+  type = "text",
+}) {
+  return (
+    <div>
+      <label className="mb-1.5 block text-sm font-medium text-[var(--text-primary)]">
+        {label}
+      </label>
+      <input
+        type={type}
+        name={name}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        className={`w-full rounded-xl border px-4 py-2.5 text-sm text-[var(--text-primary)] outline-none transition placeholder:text-[var(--text-muted)] bg-[var(--bg-subtle)] ${
+          error
+            ? "border-red-400 focus:border-red-400"
+            : "border-[var(--border)] focus:border-[var(--accent)]"
+        }`}
+      />
+      {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
     </div>
   );
 }
