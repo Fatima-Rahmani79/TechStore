@@ -11,9 +11,18 @@ const stats = [
 export default function Hero() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-4">
-      <div className="grid min-h-[calc(100vh-80px)] items-center gap-12 lg:grid-cols-2">
-        {/* ── Content ─────────────────────────────────────────────────── */}
-        <div className="flex flex-col items-start">
+      <div className="grid items-center gap-12 lg:gap-20 py-12 lg:min-h-[calc(100vh-80px)] lg:grid-cols-2">
+        {/* ── Content ── */}
+        <div
+          className="
+flex
+flex-col
+items-center
+text-center
+lg:items-start
+lg:text-left
+"
+        >
           {/* Badge */}
           <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--border-strong)] px-4 py-1.5 text-sm font-medium text-[var(--text-secondary)]">
             <Zap
@@ -25,7 +34,7 @@ export default function Hero() {
           </span>
 
           {/* Heading */}
-          <h1 className="mb-5 text-5xl font-bold leading-[1.1]  text-[var(--text-primary)] lg:text-6xl xl:text-7xl">
+          <h1 className="mb-5 font-bold leading-[1.1]  text-[var(--text-primary)] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl">
             Technology
             <br />
             Designed For
@@ -38,7 +47,7 @@ export default function Hero() {
           </h1>
 
           {/* Description */}
-          <p className="mb-8 max-w-md text-base leading-relaxed text-[var(--text-muted)] lg:text-lg">
+          <p className="mb-8 max-w-xl text-base leading-relaxed text-[var(--text-secondary)] lg:text-lg">
             Discover premium devices built for work, creativity and
             entertainment.
           </p>
@@ -62,7 +71,15 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="flex items-center gap-8">
+          <div
+            className="
+flex
+flex-wrap
+justify-center
+gap-8
+lg:justify-start
+"
+          >
             {stats.map(({ value, label }, i) => (
               <div key={label} className="flex items-center gap-8">
                 <div>
@@ -82,7 +99,11 @@ export default function Hero() {
         </div>
 
         {/* ── Image ── */}
-        <div className="relative flex items-center justify-center">
+        <div
+          className="
+          w-full mx-auto sm:max-w-md max-w-sm lg:max-w-xl xl:max-w-2xl object-contain drop-shadow-xl
+"
+        >
           {/* Glow*/}
           <div className="absolute inset-0 -z-10 rounded-3xl bg-[var(--accent)] opacity-[0.07] blur-3xl" />
 
