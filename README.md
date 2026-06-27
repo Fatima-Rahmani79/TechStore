@@ -96,11 +96,3 @@ This project is provided as-is. Add a license file (e.g., MIT) if you plan to pu
 ## Demo
 
 ![Demo screenshot](public/images/Screenshot.png)
-
-If you'd like, I can also:
-
-- Replace this demo image with a GIF or a higher-resolution screenshot
-- Add example environment variables and a small deployment guide
-- Add a `DEVELOPMENT.md` with contributor setup steps
-
-Tell me which you'd like next.
