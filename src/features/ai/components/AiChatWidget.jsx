@@ -67,17 +67,17 @@ export default function AiChatWidget() {
 
   return (
     <>
-      {/* ── Floating Button ───────────────────────────────────────────── */}
+      {/* ── Floating Button ── */}
       <button
         onClick={() => setIsOpen((o) => !o)}
         aria-label={isOpen ? "Close assistant" : "Open assistant"}
-        className="fixed bottom-6 right-6 z-50 flex h-13 w-13 items-center justify-center rounded-full bg-neutral-900 text-white shadow-lg transition hover:scale-105 hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
+        className="fixed bottom-6 right-6 z-50 flex h-13 w-13 items-center justify-center rounded-full bg-[var(--text-primary)] text-[var(--text-inverse)] shadow-lg transition hover:scale-105 hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
         style={{ width: "52px", height: "52px" }}
       >
         {isOpen ? <X size={20} /> : <MessageCircle size={20} />}
       </button>
 
-      {/* ── Chat Panel ────────────────────────────────────────────────── */}
+      {/* ── Chat Panel ── */}
       {isOpen && (
         <div
           className="fixed bottom-24 right-6 z-50 flex w-[340px] flex-col overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--bg-surface)] shadow-xl"
