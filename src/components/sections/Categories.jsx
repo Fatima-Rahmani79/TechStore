@@ -8,24 +8,28 @@ const categories = [
   {
     id: 1,
     name: "Laptops",
+    slug: "laptop",
     image: laptopsCategory,
     description: "High-performance laptops for work and gaming",
   },
   {
     id: 2,
     name: "Monitors",
+    slug: "monitor",
     image: monitorsCategory,
     description: "Sharp displays for productivity and entertainment",
   },
   {
     id: 3,
     name: "Audio",
+    slug: "audio",
     image: audioCategory,
     description: "Headphones, speakers and premium sound gear",
   },
   {
     id: 4,
     name: "Accessories",
+    slug: "accessory",
     image: accessoriesCategory,
     description: "Essential accessories for your setup",
   },
