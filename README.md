@@ -96,3 +96,4 @@ This project is provided as-is. Add a license file (e.g., MIT) if you plan to pu
 ## Demo
 
 ![Demo screenshot](public/images/Screenshot.png)
+![Demo screenshot](public/images/Screenshot2.png)
