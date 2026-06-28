@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Zap } from "lucide-react";
 import heroImage from "/images/hero-image.webp";
+import { motion } from "framer-motion";
+import { fadeUp } from "../../utils/animations";
 
 const stats = [
   { value: "27+", label: "Brands" },
@@ -25,17 +27,19 @@ export default function Hero() {
           </span>
 
           {/* Heading */}
-          <h1 className="mb-5 font-bold leading-[1.1]  text-[var(--text-primary)] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl">
-            Technology
-            <br />
-            Designed For
-            <br />
-            <span className="relative inline-block">
-              Modern Life
-              {/* underline with accent */}
-              <span className="absolute -bottom-1 left-0 h-[6px] w-full rounded-full bg-[var(--accent)] opacity-70" />
-            </span>
-          </h1>
+          <motion.div {...fadeUp}>
+            <h1 className="mb-5 font-bold leading-[1.1]  text-[var(--text-primary)] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl">
+              Technology
+              <br />
+              Designed For
+              <br />
+              <span className="relative inline-block">
+                Modern Life
+                {/* underline with accent */}
+                <span className="absolute -bottom-1 left-0 h-[6px] w-full rounded-full bg-[var(--accent)] opacity-70" />
+              </span>
+            </h1>
+          </motion.div>
 
           {/* Description */}
           <p className="mb-8 max-w-xl text-base leading-relaxed text-[var(--text-secondary)] lg:text-lg">

@@ -1,5 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 
+import { AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
+
 import Home from "../pages/HomePage";
 import ProductDetails from "../pages/ProductDetailsPage";
 import Cart from "../pages/CartPage";
@@ -11,19 +14,27 @@ import About from "../pages/About";
 import CheckoutPage from "../pages/CheckoutPage";
 
 export default function AppRoutes() {
-  return (
-    <Routes>
-      <Route element={<MainLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/products/:id" element={<ProductDetails />} />
-        <Route path="/checkout" element={<CheckoutPage />} />
+  const location = useLocation();
 
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
+  return (
+    <AnimatePresence mode="wait">
+      <Routes>
+        <Route
+          element={<MainLayout />}
+          location={location}
+          key={location.pathname}
+        >
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
+
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </AnimatePresence>
   );
 }
