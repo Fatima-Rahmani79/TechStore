@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../../features/products/components/ProductCard";
 import { getFeaturedProducts } from "../../services/productsApi";
+import { motion } from "framer-motion";
+import { fadeUp } from "../../utils/animations";
 
 export default function FeaturedProducts() {
   const [products, setProducts] = useState([]);
@@ -19,10 +21,11 @@ export default function FeaturedProducts() {
     <section className="mx-auto mb-14 max-w-7xl px-6 flex justify-center">
       <div className="container">
         <div className="mb-12">
-          <p className="badge badge-accent mb-3">Featured</p>
+          <motion.div {...fadeUp}>
+            <p className="badge badge-accent mb-3">Featured</p>
 
-          <h2 className="text-4xl font-display">Featured Products</h2>
-
+            <h2 className="text-4xl font-display">Featured Products</h2>
+          </motion.div>
           <p className="mt-3 max-w-xl text-[var(--text-secondary)]">
             Discover our handpicked selection of featured products, showcasing
           </p>
