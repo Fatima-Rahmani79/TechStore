@@ -38,7 +38,7 @@ export default function SearchModal({ onClose }) {
         initial={{ opacity: 0, scale: 0.96, y: -8 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.96, y: -8 }}
-        transition={{ duration: 0.15, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.15, ease: "easeOut" }}
         className="fixed inset-x-0 top-24 z-50 mx-auto max-w-md px-4"
         onClick={(e) => e.stopPropagation()}
       >

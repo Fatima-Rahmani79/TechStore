@@ -3,8 +3,8 @@
 /* ─── CSS Variables — Light Mode ────────────────────────────────────────── */
 :root {
   /* Backgrounds */
-  --bg-page: #f7f7f6; /* neutral-50  — زمینه کل صفحه */
-  --bg-surface: #ffffff; /* neutral-0   — کارت، navbar */
+  --bg-page: #f7f7f6; /* neutral-50 */
+  --bg-surface: #ffffff; /* neutral-0   navbar */
   --bg-subtle: #efefed; /* neutral-100 — hover، input */
   --bg-muted: #e2e1de; /* neutral-200 — skeleton، divider */
 
@@ -21,7 +21,7 @@
   /* Accent */
   --accent: #fedb02;
   --accent-hover: #ffe358;
-  --accent-text: #1c1b1a; /* روی accent همیشه dark */
+  --accent-text: #1c1b1a;
 
   /* Status colors */
   --success: #16a34a;
@@ -54,7 +54,7 @@
   --border: #2e2d2b; /* neutral-700 */
   --border-strong: #4a4945; /* neutral-600 */
 
-  --accent: #e8ff59; /* accent روی dark خیلی خوب pop می‌کنه */
+  --accent: #e8ff59;
   --accent-hover: #f5ff8a;
   --accent-text: #111110;
 
