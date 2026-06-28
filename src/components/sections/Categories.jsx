@@ -4,7 +4,7 @@ import monitorsCategory from "/images/monitor.webp";
 import audioCategory from "/images/audio.webp";
 import accessoriesCategory from "/images/accessory.jpg";
 import { motion } from "framer-motion";
-import { fadeUp } from "../../utils/animations";
+import { fadeUpInView } from "../../utils/animations";
 
 const categories = [
   {
@@ -40,7 +40,7 @@ const categories = [
 export default function Categories() {
   return (
     <section className="mx-auto mb-14 max-w-7xl px-6 py-20">
-      <motion.div {...fadeUp}>
+      <motion.div {...fadeUpInView}>
         <div className="mb-10">
           <p className="badge badge-accent mb-3">Categories</p>
 
@@ -53,11 +53,30 @@ export default function Categories() {
         </div>
       </motion.div>
 
-      <div className="grid gap-8 md:grid-cols-2">
+      <motion.div
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={{
+          animate: { transition: { staggerChildren: 0.07 } },
+        }}
+        className="grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-2"
+      >
         {categories.map((category) => (
-          <CategoryCard key={category.id} category={category} />
+          <motion.div
+            variants={{
+              initial: { opacity: 0, y: 16 },
+              animate: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] },
+              },
+            }}
+          >
+            <CategoryCard key={category.id} category={category} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
