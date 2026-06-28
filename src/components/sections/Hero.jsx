@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Zap } from "lucide-react";
-import heroImage from "../../assets/images/hero-image.png";
+import heroImage from "/images/hero-image.webp";
 
 const stats = [
   { value: "27+", label: "Brands" },

@@ -353,10 +353,10 @@
     "category": "laptop",
     "stock": 7,
     "images": [
-      "/images/asus-proArtPZ13-1.png",
-      "/images/asus-proArtPZ13-2.png",
-      "/images/asus-proArtPZ13-3.png",
-      "/images/asus-proArtPZ13-4.png"
+      "/images/asus-proArtPZ13-1.webp",
+      "/images/asus-proArtPZ13-2.webp",
+      "/images/asus-proArtPZ13-3.webp",
+      "/images/asus-proArtPZ13-4.webp"
     ],
     "price": 1200,
     "currency": "USD",
@@ -908,7 +908,7 @@
     "category": "audio",
     "stock": 35,
     "images": [
-      "/images/audio-JBL-Tune230NC-1.png",
+      "/images/audio-JBL-Tune230NC-1.webp",
       "/images/audio-JBL-Tune230NC-2.webp"
     ],
     "price": 100,
