@@ -21,7 +21,7 @@ export default function Hero() {
               className="text-[var(--accent)]"
               fill="currentColor"
             />
-            New Arrivals
+            Trending Tech
           </span>
 
           {/* Heading */}
@@ -87,8 +87,9 @@ export default function Hero() {
           w-full mx-auto sm:max-w-md max-w-sm lg:max-w-xl xl:max-w-2xl object-contain drop-shadow-xl"
         >
           {/* Glow*/}
-          <div className="absolute inset-0 -z-10 rounded-3xl bg-[var(--accent)] opacity-[0.07] blur-3xl" />
+          <div className="absolute -left-20 top-20 h-72 w-72 rounded-full bg-[var(--accent)] opacity-10 blur-[120px]" />
 
+          <div className="absolute bottom-10 right-10 h-80 w-80 rounded-full bg-sky-300 opacity-10 blur-[140px]" />
           <img
             src={heroImage}
             alt="Featured tech products including laptops, monitors and headphones"
