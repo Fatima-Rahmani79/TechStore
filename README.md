@@ -1,7 +1,7 @@
 ## Demo
 
-![Demo screenshot](/images/Screenshot.webp)
-![Demo screenshot](/images/Screenshot2.webp)
+![Demo screenshot](public/images/Screenshot.webp)
+![Demo screenshot](public/images/Screenshot2.webp)
 
 # TechStore
 
@@ -93,7 +93,3 @@ If you add new dependencies, update `package.json` and include rationale in your
 
 - This project is a frontend demonstration and doesn't include server-side persistence by default. To add a backend, wire the UI to your API in `src/services/productsApi.js` and update integration points in the components and features folders.
 - To add tests, consider introducing Jest + React Testing Library and add scripts to `package.json`.
-
-## License
-
-This project is provided as-is. Add a license file (e.g., MIT) if you plan to publish or open-source the repository.
