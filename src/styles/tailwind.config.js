@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
-  darkMode: "class", // toggle با class روی <html>
+  darkMode: "class",
 
   theme: {
     extend: {
-      // ─── Colors ────────────────────────────────────────────────────────────
+      // ─── Colors ────
       colors: {
         // Neutral
         neutral: {
@@ -25,7 +25,7 @@ export default {
 
         // Accent
         accent: {
-          DEFAULT: "#E8FF59", // lime sharp — روی dark خیلی خوبه
+          DEFAULT: "#E8FF59",
           hover: "#D4EB45",
           muted: "#C8DE30",
         },
@@ -48,7 +48,7 @@ export default {
         },
       },
 
-      // ─── Typography ────────────────────────────────────────────────────────
+      // ─── Typography ────
       fontFamily: {
         sans: ["'DM Sans'", "sans-serif"], // body — geometric, clean
         display: ["'Syne'", "sans-serif"], // heading — editorial, bold
@@ -74,8 +74,8 @@ export default {
         semibold: "600",
       },
 
-      // ─── Spacing ───────────────────────────────────────────────────────────
-      // 4px base grid — همه چیز ضربی از 4 باشه
+      // ─── Spacing ───
+      // 4px base grid
       spacing: {
         px: "1px",
         0: "0",
@@ -102,7 +102,7 @@ export default {
         32: "128px",
       },
 
-      // ─── Border Radius ─────────────────────────────────────────────────────
+      // ─── Border Radius ─────
       borderRadius: {
         none: "0",
         sm: "4px",
@@ -115,20 +115,20 @@ export default {
         full: "9999px",
       },
 
-      // ─── Shadows ───────────────────────────────────────────────────────────
+      // ─── Shadows ────
       boxShadow: {
         none: "none",
         sm: "0 1px 2px 0 rgb(0 0 0 / 0.06)",
         DEFAULT: "0 1px 4px 0 rgb(0 0 0 / 0.08), 0 0 0 0.5px rgb(0 0 0 / 0.06)",
         md: "0 4px 12px 0 rgb(0 0 0 / 0.10), 0 0 0 0.5px rgb(0 0 0 / 0.06)",
         lg: "0 8px 24px 0 rgb(0 0 0 / 0.12), 0 0 0 0.5px rgb(0 0 0 / 0.06)",
-        // dark mode shadows (opacity کمتر)
+        // dark mode shadows
         "dark-sm": "0 1px 2px 0 rgb(0 0 0 / 0.3)",
         "dark-md": "0 4px 12px 0 rgb(0 0 0 / 0.4)",
         "dark-lg": "0 8px 24px 0 rgb(0 0 0 / 0.5)",
       },
 
-      // ─── Animation ─────────────────────────────────────────────────────────
+      // ─── Animation ───
       transitionDuration: {
         fast: "100ms",
         DEFAULT: "150ms",
@@ -141,9 +141,9 @@ export default {
         out: "cubic-bezier(0, 0, 0.2, 1)",
       },
 
-      // ─── Layout ────────────────────────────────────────────────────────────
+      // ─── Layout ─────
       maxWidth: {
-        content: "1120px", // max width صفحه
+        content: "1120px",
         card: "360px",
       },
 
