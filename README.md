@@ -7,6 +7,7 @@ This repository is ideal as a demo storefront, starter template for e-commerce U
 ## Features
 
 - Responsive, mobile-first UI with Tailwind CSS
+- Smooth animated transitions and interactions using Framer Motion
 - Product listing, categories, and product detail pages
 - Cart and wishlist UI (client-side state)
 - Search and sort functionality, with debounced input
@@ -17,6 +18,7 @@ This repository is ideal as a demo storefront, starter template for e-commerce U
 
 - React (JSX) + Vite
 - Tailwind CSS + PostCSS
+- Framer Motion for animations and interactive transitions
 - Local data: JSON files in `src/data`
 - Development tooling: ESLint, Vite dev server
 
