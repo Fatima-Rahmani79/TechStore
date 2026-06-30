@@ -1,3 +1,8 @@
+## Demo
+
+![Demo screenshot](/images/Screenshot.webp)
+![Demo screenshot](/images/Screenshot2.webp)
+
 # TechStore
 
 TechStore is a lightweight, responsive e-commerce frontend built with Vite, React, and Tailwind CSS. It showcases product listings, categories, product details, cart and wishlist flows, and client-side search and filters using a small local dataset.
@@ -92,10 +97,3 @@ If you add new dependencies, update `package.json` and include rationale in your
 ## License
 
 This project is provided as-is. Add a license file (e.g., MIT) if you plan to publish or open-source the repository.
-
----
-
-## Demo
-
-![Demo screenshot](/images/Screenshot.webp)
-![Demo screenshot](/images/Screenshot2.webp)
