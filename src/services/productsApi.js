@@ -5,7 +5,7 @@ export async function getProducts() {
 }
 
 export async function getFeaturedProducts() {
-  return products.filter((p) => p.specialOffer || p.bestSeller);
+  return products.filter((p) => p.featured === true);
 }
 
 export async function getProductByCategory(category) {

@@ -44,7 +44,7 @@ export default function FeaturedProducts() {
         <motion.div
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.1 }}
           variants={{
             animate: { transition: { staggerChildren: 0.07 } },
           }}
