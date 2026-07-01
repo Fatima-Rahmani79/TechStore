@@ -61,10 +61,10 @@ export default function Shop() {
   useEffect(() => {
     async function loadProducts() {
       try {
-        const data = await getProducts();
+        const data = await getProducts(); // ← همیشه همه رو بگیر
         setProducts(data);
       } catch {
-        setError("Failed to load products. Please try again.");
+        setError("Failed to load products.");
       } finally {
         setLoading(false);
       }

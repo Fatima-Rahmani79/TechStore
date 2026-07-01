@@ -5,10 +5,11 @@ import { staggerContainer, staggerItem } from "../../../utils/animations";
 export default function ProductGrid({ products }) {
   return (
     <motion.div
+      key={products.map((p) => p.id).join("-")}
       variants={staggerContainer}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: false, amount: 0.05 }}
       className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
     >
       {products.map((product) => (
