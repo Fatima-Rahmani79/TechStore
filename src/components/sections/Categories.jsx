@@ -64,6 +64,7 @@ export default function Categories() {
       >
         {categories.map((category) => (
           <motion.div
+            key={category.id}
             variants={{
               initial: { opacity: 0, y: 16 },
               animate: {
@@ -73,7 +74,7 @@ export default function Categories() {
               },
             }}
           >
-            <CategoryCard key={category.id} category={category} />
+            <CategoryCard category={category} />
           </motion.div>
         ))}
       </motion.div>
